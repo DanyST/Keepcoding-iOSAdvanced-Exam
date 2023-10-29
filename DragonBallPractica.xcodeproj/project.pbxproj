@@ -20,6 +20,7 @@
 		767A494D2AEE155500C0D225 /* UIViewController+StoryboardIdentifer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A494C2AEE155500C0D225 /* UIViewController+StoryboardIdentifer.swift */; };
 		767A494F2AEE167D00C0D225 /* UIStoryboard+AppStoryboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A494E2AEE167D00C0D225 /* UIStoryboard+AppStoryboards.swift */; };
 		767A49522AEE194700C0D225 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767A49512AEE194700C0D225 /* Login.storyboard */; };
+		767A49562AEE1F9A00C0D225 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49552AEE1F9A00C0D225 /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		767A494C2AEE155500C0D225 /* UIViewController+StoryboardIdentifer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardIdentifer.swift"; sourceTree = "<group>"; };
 		767A494E2AEE167D00C0D225 /* UIStoryboard+AppStoryboards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+AppStoryboards.swift"; sourceTree = "<group>"; };
 		767A49512AEE194700C0D225 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		767A49552AEE1F9A00C0D225 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,9 +181,26 @@
 		767A49502AEE193600C0D225 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				767A49512AEE194700C0D225 /* Login.storyboard */,
+				767A49542AEE1F8E00C0D225 /* Controller */,
+				767A49532AEE1F8600C0D225 /* View */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		767A49532AEE1F8600C0D225 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				767A49512AEE194700C0D225 /* Login.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		767A49542AEE1F8E00C0D225 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				767A49552AEE1F9A00C0D225 /* LoginViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,6 +283,7 @@
 				767A49212AEE071F00C0D225 /* SceneDelegate.swift in Sources */,
 				767A494F2AEE167D00C0D225 /* UIStoryboard+AppStoryboards.swift in Sources */,
 				767A49482AEE127700C0D225 /* UIStoryboard+instantiateViewController.swift in Sources */,
+				767A49562AEE1F9A00C0D225 /* LoginViewController.swift in Sources */,
 				767A49412AEE0DBB00C0D225 /* SplashViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
