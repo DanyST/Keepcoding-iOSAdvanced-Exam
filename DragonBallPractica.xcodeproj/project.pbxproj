@@ -23,6 +23,8 @@
 		767A49562AEE1F9A00C0D225 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49552AEE1F9A00C0D225 /* LoginViewController.swift */; };
 		767A49592AEE253700C0D225 /* LoginViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49582AEE253700C0D225 /* LoginViewState.swift */; };
 		767A495C2AEE289200C0D225 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A495B2AEE289200C0D225 /* LoginViewModel.swift */; };
+		767A49612AEE352800C0D225 /* Heroes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767A49602AEE352800C0D225 /* Heroes.storyboard */; };
+		767A49632AEE353300C0D225 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49622AEE353300C0D225 /* HeroesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		767A49552AEE1F9A00C0D225 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		767A49582AEE253700C0D225 /* LoginViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewState.swift; sourceTree = "<group>"; };
 		767A495B2AEE289200C0D225 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		767A49602AEE352800C0D225 /* Heroes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Heroes.storyboard; sourceTree = "<group>"; };
+		767A49622AEE353300C0D225 /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			children = (
 				767A49362AEE08E200C0D225 /* Splash */,
 				767A49502AEE193600C0D225 /* Login */,
+				767A495D2AEE34FD00C0D225 /* Heroes */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -225,6 +230,31 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		767A495D2AEE34FD00C0D225 /* Heroes */ = {
+			isa = PBXGroup;
+			children = (
+				767A495F2AEE351A00C0D225 /* Controller */,
+				767A495E2AEE351600C0D225 /* View */,
+			);
+			path = Heroes;
+			sourceTree = "<group>";
+		};
+		767A495E2AEE351600C0D225 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				767A49602AEE352800C0D225 /* Heroes.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		767A495F2AEE351A00C0D225 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				767A49622AEE353300C0D225 /* HeroesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -286,6 +316,7 @@
 				767A49522AEE194700C0D225 /* Login.storyboard in Resources */,
 				767A492B2AEE072000C0D225 /* LaunchScreen.storyboard in Resources */,
 				767A49282AEE072000C0D225 /* Assets.xcassets in Resources */,
+				767A49612AEE352800C0D225 /* Heroes.storyboard in Resources */,
 				767A493A2AEE0AAC00C0D225 /* Splash.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +339,7 @@
 				767A495C2AEE289200C0D225 /* LoginViewModel.swift in Sources */,
 				767A49482AEE127700C0D225 /* UIStoryboard+instantiateViewController.swift in Sources */,
 				767A49562AEE1F9A00C0D225 /* LoginViewController.swift in Sources */,
+				767A49632AEE353300C0D225 /* HeroesViewController.swift in Sources */,
 				767A49412AEE0DBB00C0D225 /* SplashViewState.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
