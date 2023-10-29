@@ -9,7 +9,7 @@ import Foundation
 
 enum LoginViewState {
     case loading(_ isLoading: Bool)
-    case showErrorEmail(_ error: String)
-    case showErrorPassword(_ error: String)
+    case showErrorEmail(_ error: String?)
+    case showErrorPassword(_ error: String?)
     case navigateToNext
 }

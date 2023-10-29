@@ -9,7 +9,6 @@ import UIKit
 
 protocol LoginViewControllerDelegate {
     var viewState: ((LoginViewState) -> Void)? { get set }
-    func onViewsLoaded()
     func onLoginPressed(with email: String?, and password: String?)
 }
 
@@ -20,6 +19,7 @@ final class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var emailErrorLabel: UILabel!
     @IBOutlet weak var passwordErrorLabel: UILabel!
+    @IBOutlet weak var centerYFieldsStackViewConstraint: NSLayoutConstraint!
     
     // MARK: - ViewModel
     var viewModel: LoginViewControllerDelegate?
@@ -29,13 +29,25 @@ final class LoginViewController: UIViewController {
         super.viewDidLoad()
         initViews()
         setObservers()
-        viewModel?.onViewsLoaded()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // MARK: - Add Keyboard Observers
+        addKeyboardObservers()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // MARK: - remove Keyboard Observers
+        removeKeyboardObservers()
     }
 }
 
 // MARK: - Actions
 extension LoginViewController {
     @IBAction private func didTapLoginButton() {
+        dismissKeyboard()
         viewModel?.onLoginPressed(
             with: emailTextField.text,
             and: passwordTextField.text
@@ -53,6 +65,12 @@ extension LoginViewController {
         
         emailErrorLabel.isHidden = true
         passwordErrorLabel.isHidden = true
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissKeyboard)
+        )
+        view.addGestureRecognizer(tapGestureRecognizer)
     }
     
     private func setObservers() {
@@ -79,14 +97,19 @@ extension LoginViewController {
         loadingView.isHidden = !isLoading
     }
     
-    private func updateLabelError(label: UILabel, error: String) {
+    private func updateLabelError(label: UILabel, error: String?) {
         label.text = error
-        label.isHidden = error.isEmpty
+        label.isHidden = error?.isEmpty == true
+    }
+    
+    @objc
+    private func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
 
 extension LoginViewController: UITextFieldDelegate {
-    func textFieldDidBeginEditing(_ textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         switch FieldType(rawValue: textField.tag)  {
         case .email:
             emailErrorLabel.isHidden = true
@@ -101,5 +124,35 @@ extension LoginViewController {
     private enum FieldType: Int {
         case email = 0
         case password
+    }
+}
+
+extension LoginViewController {
+    private func addKeyboardObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    private func removeKeyboardObservers() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    @objc
+    private func keyboardWillShow(_ notification: Notification) {
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            UIView.animate(withDuration: 0.25) { [weak self] in
+                self?.centerYFieldsStackViewConstraint.constant = -keyboardHeight / 6
+                self?.view.layoutIfNeeded()
+            }
+        }
+    }
+    
+    @objc
+    private func keyboardWillHide() {
+        centerYFieldsStackViewConstraint.constant = 0.0
+        view.layoutIfNeeded()
     }
 }

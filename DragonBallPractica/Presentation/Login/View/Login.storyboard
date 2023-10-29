@@ -121,6 +121,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="centerYFieldsStackViewConstraint" destination="KFm-mH-8oh" id="PLc-4x-CKJ"/>
                         <outlet property="emailErrorLabel" destination="S0N-bz-8uM" id="ee0-FP-pdt"/>
                         <outlet property="emailTextField" destination="mQR-PT-weH" id="M1j-DO-dds"/>
                         <outlet property="loadingView" destination="u1T-Ug-7tn" id="R1I-ge-Jnl"/>
