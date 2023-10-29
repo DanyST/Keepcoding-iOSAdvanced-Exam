@@ -52,7 +52,7 @@ extension SplashViewController {
     private func navigateToLogin() {
         let storyboard = UIStoryboard.storyboard(.login)
         let viewController: LoginViewController = storyboard.instantiateViewController()
-        let viewModel = LoginViewModel()
+        let viewModel = LoginViewModel(apiDataSource: ApiDataSource(networkProvider: NetworkProvider()))
         viewController.viewModel = viewModel
         navigationController?.setViewControllers([viewController], animated: true)
     }
