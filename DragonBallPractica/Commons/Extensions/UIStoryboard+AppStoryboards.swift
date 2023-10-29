@@ -11,7 +11,8 @@ extension UIStoryboard {
     
     /// The uniform place where we state all the storyboard we have in our application
     enum AppStoryboard: String {
-        case splash       
+        case splash
+        case login
         
         var filename: String {
             return rawValue.capitalized
