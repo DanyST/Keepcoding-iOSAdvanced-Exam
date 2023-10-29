@@ -70,7 +70,7 @@ extension DragonBallEndpoint {
                 return URLQueryItem(name: $0.key, value: nil)
             }
             
-            let valueString = String(describing: $0.value)
+            let valueString = String(describing: value)
             return URLQueryItem(name: $0.key, value: valueString)
         }
         return queryItems
