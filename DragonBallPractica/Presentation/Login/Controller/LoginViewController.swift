@@ -7,6 +7,7 @@
 
 import UIKit
 
+// MARK: - Protocol
 protocol LoginViewControllerDelegate {
     var viewState: ((LoginViewState) -> Void)? { get set }
     func onLoginPressed(with email: String?, and password: String?)
@@ -87,7 +88,7 @@ extension LoginViewController {
                 case let .showErrorPassword(errorString):
                     self.updateLabelError(label: self.passwordErrorLabel, error: errorString)
                 case .navigateToNext:
-                    break
+                    self.navigateToNext()
                 }
             }
         }
@@ -100,6 +101,12 @@ extension LoginViewController {
     private func updateLabelError(label: UILabel, error: String?) {
         label.text = error
         label.isHidden = error?.isEmpty == true
+    }
+    
+    private func navigateToNext() {
+        let storyboard = UIStoryboard.storyboard(.heroes)
+        let viewController: HeroesViewController = storyboard.instantiateViewController()
+        navigationController?.setViewControllers([viewController], animated: true)
     }
     
     @objc

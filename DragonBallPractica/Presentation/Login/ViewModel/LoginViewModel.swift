@@ -15,7 +15,9 @@ final class LoginViewModel {
 // MARK: - Private Methods
 extension LoginViewModel {
     private func doLoginWith(email: String, password: String) {
-        
+        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [weak self] in
+            self?.viewState?(.navigateToNext)
+        }
     }
     
     private func isValid(email: String?) -> Bool {
