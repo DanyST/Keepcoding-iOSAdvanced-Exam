@@ -10,13 +10,28 @@ import Foundation
 final class LoginViewModel {
     // MARK: - Properties
     private var _viewState: ((LoginViewState) -> Void)?
+    private let apiDataSource: ApiDataSourceProtocol
+    
+    init(apiDataSource: ApiDataSourceProtocol) {
+        self.apiDataSource = apiDataSource
+    }
 }
 
 // MARK: - Private Methods
 extension LoginViewModel {
     private func doLoginWith(email: String, password: String) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [weak self] in
-            self?.viewState?(.navigateToNext)
+        apiDataSource.login(for: email, with: password) { [weak self] result in
+            defer {
+                self?.viewState?(.loading(false))
+            }
+            switch result {
+            case let .success(token):
+                print("token response: ", token)
+                self?.viewState?(.navigateToNext)
+            case let .failure(error):
+                print("Error: ", error)
+                self?.viewState?(.showErrorPassword("Invalid username and/or password. Please check your credentials and try again"))
+            }
         }
     }
     
