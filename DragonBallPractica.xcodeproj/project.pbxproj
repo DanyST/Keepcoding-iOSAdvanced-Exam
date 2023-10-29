@@ -32,6 +32,7 @@
 		767A49702AEEC0C200C0D225 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A496F2AEEC0C200C0D225 /* ApiError.swift */; };
 		767A49722AEEC55F00C0D225 /* NetworkProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49712AEEC55F00C0D225 /* NetworkProviderProtocol.swift */; };
 		767A49752AEEC5F100C0D225 /* ApiDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49742AEEC5F100C0D225 /* ApiDataSourceProtocol.swift */; };
+		767A497A2AEECE7500C0D225 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 767A49792AEECE7500C0D225 /* KeychainSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				767A497A2AEECE7500C0D225 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +334,9 @@
 			dependencies = (
 			);
 			name = DragonBallPractica;
+			packageProductDependencies = (
+				767A49792AEECE7500C0D225 /* KeychainSwift */,
+			);
 			productName = DragonBallPractica;
 			productReference = 767A491B2AEE071F00C0D225 /* DragonBallPractica.app */;
 			productType = "com.apple.product-type.application";
@@ -360,6 +365,9 @@
 				Base,
 			);
 			mainGroup = 767A49122AEE071F00C0D225;
+			packageReferences = (
+				767A49782AEECE7500C0D225 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = 767A491C2AEE071F00C0D225 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -614,6 +622,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		767A49782AEECE7500C0D225 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 20.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		767A49792AEECE7500C0D225 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 767A49782AEECE7500C0D225 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 767A49132AEE071F00C0D225 /* Project object */;
 }
