@@ -14,11 +14,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        let splashViewController = UIStoryboard(name: "Splash", bundle: nil)
-            .instantiateViewController(withIdentifier: "SplashViewController") as? SplashViewController
+        let storyboard = UIStoryboard.storyboard(.splash)
+        let splashViewController: SplashViewController = storyboard.instantiateViewController()
         let splashViewModel = SplashViewModel()
-        splashViewController?.viewModel = splashViewModel
-        let rootViewController = UINavigationController(rootViewController: splashViewController ?? UIViewController())
+        splashViewController.viewModel = splashViewModel
+        let rootViewController = UINavigationController(rootViewController: splashViewController)
         
         let window = UIWindow(windowScene: windowScene)
         window.rootViewController = rootViewController
