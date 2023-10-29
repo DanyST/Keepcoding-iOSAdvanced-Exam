@@ -43,9 +43,15 @@ extension SplashViewController {
                 case let .loading(isLoading):
                     self?.activityIndicator.isHidden = !isLoading
                 case .navigateToLogin:
-                    break
+                    self?.navigateToLogin()
                 }
             }
         }
+    }
+    
+    private func navigateToLogin() {
+        let storyboard = UIStoryboard.storyboard(.login)
+        let viewController: LoginViewController = storyboard.instantiateViewController()
+        navigationController?.setViewControllers([viewController], animated: true)
     }
 }
