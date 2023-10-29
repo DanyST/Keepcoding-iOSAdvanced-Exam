@@ -25,6 +25,13 @@
 		767A495C2AEE289200C0D225 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A495B2AEE289200C0D225 /* LoginViewModel.swift */; };
 		767A49612AEE352800C0D225 /* Heroes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767A49602AEE352800C0D225 /* Heroes.storyboard */; };
 		767A49632AEE353300C0D225 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49622AEE353300C0D225 /* HeroesViewController.swift */; };
+		767A49672AEEB36900C0D225 /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49662AEEB36900C0D225 /* ApiDataSource.swift */; };
+		767A496A2AEEB39D00C0D225 /* DragonBallEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49692AEEB39D00C0D225 /* DragonBallEndpoint.swift */; };
+		767A496C2AEEB3AF00C0D225 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A496B2AEEB3AF00C0D225 /* NetworkProvider.swift */; };
+		767A496E2AEEB4BE00C0D225 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A496D2AEEB4BE00C0D225 /* HTTPMethod.swift */; };
+		767A49702AEEC0C200C0D225 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A496F2AEEC0C200C0D225 /* ApiError.swift */; };
+		767A49722AEEC55F00C0D225 /* NetworkProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49712AEEC55F00C0D225 /* NetworkProviderProtocol.swift */; };
+		767A49752AEEC5F100C0D225 /* ApiDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49742AEEC5F100C0D225 /* ApiDataSourceProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +55,13 @@
 		767A495B2AEE289200C0D225 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		767A49602AEE352800C0D225 /* Heroes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Heroes.storyboard; sourceTree = "<group>"; };
 		767A49622AEE353300C0D225 /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
+		767A49662AEEB36900C0D225 /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
+		767A49692AEEB39D00C0D225 /* DragonBallEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallEndpoint.swift; sourceTree = "<group>"; };
+		767A496B2AEEB3AF00C0D225 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		767A496D2AEEB4BE00C0D225 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		767A496F2AEEC0C200C0D225 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		767A49712AEEC55F00C0D225 /* NetworkProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderProtocol.swift; sourceTree = "<group>"; };
+		767A49742AEEC5F100C0D225 /* ApiDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSourceProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +98,7 @@
 				767A49322AEE089D00C0D225 /* App */,
 				767A49332AEE08A900C0D225 /* Resources */,
 				767A49452AEE125600C0D225 /* Commons */,
+				767A49642AEEB34B00C0D225 /* Data */,
 				767A49342AEE08B200C0D225 /* Presentation */,
 			);
 			path = DragonBallPractica;
@@ -255,6 +270,52 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		767A49642AEEB34B00C0D225 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				767A49652AEEB35400C0D225 /* Api */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		767A49652AEEB35400C0D225 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				767A49772AEEC69000C0D225 /* Models */,
+				767A49682AEEB38B00C0D225 /* NetworkProvider */,
+				767A49732AEEC58900C0D225 /* Endpoint */,
+				767A49662AEEB36900C0D225 /* ApiDataSource.swift */,
+				767A49742AEEC5F100C0D225 /* ApiDataSourceProtocol.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		767A49682AEEB38B00C0D225 /* NetworkProvider */ = {
+			isa = PBXGroup;
+			children = (
+				767A496B2AEEB3AF00C0D225 /* NetworkProvider.swift */,
+				767A49712AEEC55F00C0D225 /* NetworkProviderProtocol.swift */,
+			);
+			path = NetworkProvider;
+			sourceTree = "<group>";
+		};
+		767A49732AEEC58900C0D225 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				767A49692AEEB39D00C0D225 /* DragonBallEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		767A49772AEEC69000C0D225 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				767A496D2AEEB4BE00C0D225 /* HTTPMethod.swift */,
+				767A496F2AEEC0C200C0D225 /* ApiError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -332,11 +393,18 @@
 				767A494B2AEE152600C0D225 /* StoryboardIdentifiable.swift in Sources */,
 				767A49442AEE0FF700C0D225 /* SplashViewModel.swift in Sources */,
 				767A493E2AEE0B7500C0D225 /* SplashViewController.swift in Sources */,
+				767A496A2AEEB39D00C0D225 /* DragonBallEndpoint.swift in Sources */,
+				767A49702AEEC0C200C0D225 /* ApiError.swift in Sources */,
 				767A491F2AEE071F00C0D225 /* AppDelegate.swift in Sources */,
+				767A49672AEEB36900C0D225 /* ApiDataSource.swift in Sources */,
 				767A49212AEE071F00C0D225 /* SceneDelegate.swift in Sources */,
+				767A49752AEEC5F100C0D225 /* ApiDataSourceProtocol.swift in Sources */,
 				767A494F2AEE167D00C0D225 /* UIStoryboard+AppStoryboards.swift in Sources */,
 				767A49592AEE253700C0D225 /* LoginViewState.swift in Sources */,
+				767A496C2AEEB3AF00C0D225 /* NetworkProvider.swift in Sources */,
 				767A495C2AEE289200C0D225 /* LoginViewModel.swift in Sources */,
+				767A49722AEEC55F00C0D225 /* NetworkProviderProtocol.swift in Sources */,
+				767A496E2AEEB4BE00C0D225 /* HTTPMethod.swift in Sources */,
 				767A49482AEE127700C0D225 /* UIStoryboard+instantiateViewController.swift in Sources */,
 				767A49562AEE1F9A00C0D225 /* LoginViewController.swift in Sources */,
 				767A49632AEE353300C0D225 /* HeroesViewController.swift in Sources */,
