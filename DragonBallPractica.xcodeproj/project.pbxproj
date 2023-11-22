@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7648447F2B0D794A007DD0C4 /* DragonBallRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7648447E2B0D794A007DD0C4 /* DragonBallRepository.swift */; };
+		764844812B0D7956007DD0C4 /* DragonBallRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764844802B0D7956007DD0C4 /* DragonBallRepositoryProtocol.swift */; };
+		764844862B0D7BFE007DD0C4 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764844852B0D7BFE007DD0C4 /* LoginUseCase.swift */; };
+		764844882B0D7C14007DD0C4 /* LoginUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764844872B0D7C14007DD0C4 /* LoginUseCaseProtocol.swift */; };
+		7648448A2B0D7D77007DD0C4 /* IsLoggedUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764844892B0D7D77007DD0C4 /* IsLoggedUseCase.swift */; };
+		7648448C2B0D7D7F007DD0C4 /* IsLoggedUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7648448B2B0D7D7F007DD0C4 /* IsLoggedUseCaseProtocol.swift */; };
+		764844902B0D7EBB007DD0C4 /* LoginValidatorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7648448F2B0D7EBB007DD0C4 /* LoginValidatorUseCase.swift */; };
+		764844932B0D7F1C007DD0C4 /* LoginValidatorUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764844922B0D7F1C007DD0C4 /* LoginValidatorUseCaseProtocol.swift */; };
 		767A491F2AEE071F00C0D225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A491E2AEE071F00C0D225 /* AppDelegate.swift */; };
 		767A49212AEE071F00C0D225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49202AEE071F00C0D225 /* SceneDelegate.swift */; };
 		767A49282AEE072000C0D225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 767A49272AEE072000C0D225 /* Assets.xcassets */; };
@@ -33,9 +41,20 @@
 		767A49722AEEC55F00C0D225 /* NetworkProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49712AEEC55F00C0D225 /* NetworkProviderProtocol.swift */; };
 		767A49752AEEC5F100C0D225 /* ApiDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49742AEEC5F100C0D225 /* ApiDataSourceProtocol.swift */; };
 		767A497A2AEECE7500C0D225 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 767A49792AEECE7500C0D225 /* KeychainSwift */; };
+		767A497E2AEECF0700C0D225 /* SecureLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A497D2AEECF0700C0D225 /* SecureLocalDataSource.swift */; };
+		767A49802AEED09000C0D225 /* SecureLocalDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A497F2AEED09000C0D225 /* SecureLocalDataSourceProtocol.swift */; };
+		767A49832AEED0A100C0D225 /* SecureLocalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49822AEED0A100C0D225 /* SecureLocalType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7648447E2B0D794A007DD0C4 /* DragonBallRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallRepository.swift; sourceTree = "<group>"; };
+		764844802B0D7956007DD0C4 /* DragonBallRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallRepositoryProtocol.swift; sourceTree = "<group>"; };
+		764844852B0D7BFE007DD0C4 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
+		764844872B0D7C14007DD0C4 /* LoginUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCaseProtocol.swift; sourceTree = "<group>"; };
+		764844892B0D7D77007DD0C4 /* IsLoggedUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsLoggedUseCase.swift; sourceTree = "<group>"; };
+		7648448B2B0D7D7F007DD0C4 /* IsLoggedUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsLoggedUseCaseProtocol.swift; sourceTree = "<group>"; };
+		7648448F2B0D7EBB007DD0C4 /* LoginValidatorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidatorUseCase.swift; sourceTree = "<group>"; };
+		764844922B0D7F1C007DD0C4 /* LoginValidatorUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidatorUseCaseProtocol.swift; sourceTree = "<group>"; };
 		767A491B2AEE071F00C0D225 /* DragonBallPractica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBallPractica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		767A491E2AEE071F00C0D225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		767A49202AEE071F00C0D225 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +82,9 @@
 		767A496F2AEEC0C200C0D225 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		767A49712AEEC55F00C0D225 /* NetworkProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderProtocol.swift; sourceTree = "<group>"; };
 		767A49742AEEC5F100C0D225 /* ApiDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSourceProtocol.swift; sourceTree = "<group>"; };
+		767A497D2AEECF0700C0D225 /* SecureLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureLocalDataSource.swift; sourceTree = "<group>"; };
+		767A497F2AEED09000C0D225 /* SecureLocalDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureLocalDataSourceProtocol.swift; sourceTree = "<group>"; };
+		767A49822AEED0A100C0D225 /* SecureLocalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureLocalType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +99,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7648447D2B0D78FB007DD0C4 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				7648447E2B0D794A007DD0C4 /* DragonBallRepository.swift */,
+				764844802B0D7956007DD0C4 /* DragonBallRepositoryProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		764844822B0D7BD8007DD0C4 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				764844832B0D7BE3007DD0C4 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		764844832B0D7BE3007DD0C4 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				764844912B0D7F09007DD0C4 /* LoginValidatorUseCase */,
+				7648448D2B0D7D88007DD0C4 /* LoginUseCase */,
+				7648448E2B0D7D9E007DD0C4 /* IsLoggedUseCase */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		7648448D2B0D7D88007DD0C4 /* LoginUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				764844852B0D7BFE007DD0C4 /* LoginUseCase.swift */,
+				764844872B0D7C14007DD0C4 /* LoginUseCaseProtocol.swift */,
+			);
+			path = LoginUseCase;
+			sourceTree = "<group>";
+		};
+		7648448E2B0D7D9E007DD0C4 /* IsLoggedUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				764844892B0D7D77007DD0C4 /* IsLoggedUseCase.swift */,
+				7648448B2B0D7D7F007DD0C4 /* IsLoggedUseCaseProtocol.swift */,
+			);
+			path = IsLoggedUseCase;
+			sourceTree = "<group>";
+		};
+		764844912B0D7F09007DD0C4 /* LoginValidatorUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				7648448F2B0D7EBB007DD0C4 /* LoginValidatorUseCase.swift */,
+				764844922B0D7F1C007DD0C4 /* LoginValidatorUseCaseProtocol.swift */,
+			);
+			path = LoginValidatorUseCase;
+			sourceTree = "<group>";
+		};
 		767A49122AEE071F00C0D225 = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +177,7 @@
 				767A49332AEE08A900C0D225 /* Resources */,
 				767A49452AEE125600C0D225 /* Commons */,
 				767A49642AEEB34B00C0D225 /* Data */,
+				764844822B0D7BD8007DD0C4 /* Domain */,
 				767A49342AEE08B200C0D225 /* Presentation */,
 			);
 			path = DragonBallPractica;
@@ -275,6 +352,8 @@
 		767A49642AEEB34B00C0D225 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				7648447D2B0D78FB007DD0C4 /* Repository */,
+				767A497C2AEECECB00C0D225 /* Local */,
 				767A49652AEEB35400C0D225 /* Api */,
 			);
 			path = Data;
@@ -314,6 +393,32 @@
 			children = (
 				767A496D2AEEB4BE00C0D225 /* HTTPMethod.swift */,
 				767A496F2AEEC0C200C0D225 /* ApiError.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		767A497B2AEECEBD00C0D225 /* SecureLocalDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				767A49812AEED09700C0D225 /* Models */,
+				767A497D2AEECF0700C0D225 /* SecureLocalDataSource.swift */,
+				767A497F2AEED09000C0D225 /* SecureLocalDataSourceProtocol.swift */,
+			);
+			path = SecureLocalDataSource;
+			sourceTree = "<group>";
+		};
+		767A497C2AEECECB00C0D225 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				767A497B2AEECEBD00C0D225 /* SecureLocalDataSource */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		767A49812AEED09700C0D225 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				767A49822AEED0A100C0D225 /* SecureLocalType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -400,14 +505,22 @@
 				767A494D2AEE155500C0D225 /* UIViewController+StoryboardIdentifer.swift in Sources */,
 				767A494B2AEE152600C0D225 /* StoryboardIdentifiable.swift in Sources */,
 				767A49442AEE0FF700C0D225 /* SplashViewModel.swift in Sources */,
+				767A49802AEED09000C0D225 /* SecureLocalDataSourceProtocol.swift in Sources */,
 				767A493E2AEE0B7500C0D225 /* SplashViewController.swift in Sources */,
+				767A49832AEED0A100C0D225 /* SecureLocalType.swift in Sources */,
 				767A496A2AEEB39D00C0D225 /* DragonBallEndpoint.swift in Sources */,
 				767A49702AEEC0C200C0D225 /* ApiError.swift in Sources */,
+				764844902B0D7EBB007DD0C4 /* LoginValidatorUseCase.swift in Sources */,
+				764844812B0D7956007DD0C4 /* DragonBallRepositoryProtocol.swift in Sources */,
 				767A491F2AEE071F00C0D225 /* AppDelegate.swift in Sources */,
 				767A49672AEEB36900C0D225 /* ApiDataSource.swift in Sources */,
+				7648448A2B0D7D77007DD0C4 /* IsLoggedUseCase.swift in Sources */,
+				764844862B0D7BFE007DD0C4 /* LoginUseCase.swift in Sources */,
 				767A49212AEE071F00C0D225 /* SceneDelegate.swift in Sources */,
+				7648447F2B0D794A007DD0C4 /* DragonBallRepository.swift in Sources */,
 				767A49752AEEC5F100C0D225 /* ApiDataSourceProtocol.swift in Sources */,
 				767A494F2AEE167D00C0D225 /* UIStoryboard+AppStoryboards.swift in Sources */,
+				764844932B0D7F1C007DD0C4 /* LoginValidatorUseCaseProtocol.swift in Sources */,
 				767A49592AEE253700C0D225 /* LoginViewState.swift in Sources */,
 				767A496C2AEEB3AF00C0D225 /* NetworkProvider.swift in Sources */,
 				767A495C2AEE289200C0D225 /* LoginViewModel.swift in Sources */,
@@ -415,8 +528,11 @@
 				767A496E2AEEB4BE00C0D225 /* HTTPMethod.swift in Sources */,
 				767A49482AEE127700C0D225 /* UIStoryboard+instantiateViewController.swift in Sources */,
 				767A49562AEE1F9A00C0D225 /* LoginViewController.swift in Sources */,
+				767A497E2AEECF0700C0D225 /* SecureLocalDataSource.swift in Sources */,
+				7648448C2B0D7D7F007DD0C4 /* IsLoggedUseCaseProtocol.swift in Sources */,
 				767A49632AEE353300C0D225 /* HeroesViewController.swift in Sources */,
 				767A49412AEE0DBB00C0D225 /* SplashViewState.swift in Sources */,
+				764844882B0D7C14007DD0C4 /* LoginUseCaseProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
