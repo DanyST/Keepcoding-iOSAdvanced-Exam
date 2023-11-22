@@ -15,6 +15,14 @@
 		7648448C2B0D7D7F007DD0C4 /* IsLoggedUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7648448B2B0D7D7F007DD0C4 /* IsLoggedUseCaseProtocol.swift */; };
 		764844902B0D7EBB007DD0C4 /* LoginValidatorUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7648448F2B0D7EBB007DD0C4 /* LoginValidatorUseCase.swift */; };
 		764844932B0D7F1C007DD0C4 /* LoginValidatorUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764844922B0D7F1C007DD0C4 /* LoginValidatorUseCaseProtocol.swift */; };
+		764844962B0D9190007DD0C4 /* HeroesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764844952B0D9190007DD0C4 /* HeroesViewModel.swift */; };
+		764844992B0D91C5007DD0C4 /* HeroesViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764844982B0D91C5007DD0C4 /* HeroesViewState.swift */; };
+		7648449B2B0D93E9007DD0C4 /* HeroesViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7648449A2B0D93E9007DD0C4 /* HeroesViewControllerDelegate.swift */; };
+		764844A12B0D9731007DD0C4 /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7648449F2B0D9731007DD0C4 /* HeroCell.swift */; };
+		764844A22B0D9731007DD0C4 /* HeroCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 764844A02B0D9731007DD0C4 /* HeroCell.xib */; };
+		764844A42B0D9778007DD0C4 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764844A32B0D9778007DD0C4 /* ReusableView.swift */; };
+		764844A62B0D9B61007DD0C4 /* HeroCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764844A52B0D9B61007DD0C4 /* HeroCellModel.swift */; };
+		764844A92B0D9BEC007DD0C4 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 764844A82B0D9BEC007DD0C4 /* Kingfisher */; };
 		767A491F2AEE071F00C0D225 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A491E2AEE071F00C0D225 /* AppDelegate.swift */; };
 		767A49212AEE071F00C0D225 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49202AEE071F00C0D225 /* SceneDelegate.swift */; };
 		767A49282AEE072000C0D225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 767A49272AEE072000C0D225 /* Assets.xcassets */; };
@@ -55,6 +63,13 @@
 		7648448B2B0D7D7F007DD0C4 /* IsLoggedUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsLoggedUseCaseProtocol.swift; sourceTree = "<group>"; };
 		7648448F2B0D7EBB007DD0C4 /* LoginValidatorUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidatorUseCase.swift; sourceTree = "<group>"; };
 		764844922B0D7F1C007DD0C4 /* LoginValidatorUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginValidatorUseCaseProtocol.swift; sourceTree = "<group>"; };
+		764844952B0D9190007DD0C4 /* HeroesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewModel.swift; sourceTree = "<group>"; };
+		764844982B0D91C5007DD0C4 /* HeroesViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewState.swift; sourceTree = "<group>"; };
+		7648449A2B0D93E9007DD0C4 /* HeroesViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewControllerDelegate.swift; sourceTree = "<group>"; };
+		7648449F2B0D9731007DD0C4 /* HeroCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
+		764844A02B0D9731007DD0C4 /* HeroCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroCell.xib; sourceTree = "<group>"; };
+		764844A32B0D9778007DD0C4 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
+		764844A52B0D9B61007DD0C4 /* HeroCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCellModel.swift; sourceTree = "<group>"; };
 		767A491B2AEE071F00C0D225 /* DragonBallPractica.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonBallPractica.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		767A491E2AEE071F00C0D225 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		767A49202AEE071F00C0D225 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				764844A92B0D9BEC007DD0C4 /* Kingfisher in Frameworks */,
 				767A497A2AEECE7500C0D225 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,6 +167,32 @@
 				764844922B0D7F1C007DD0C4 /* LoginValidatorUseCaseProtocol.swift */,
 			);
 			path = LoginValidatorUseCase;
+			sourceTree = "<group>";
+		};
+		764844942B0D918A007DD0C4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				764844952B0D9190007DD0C4 /* HeroesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		764844972B0D91BB007DD0C4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				764844982B0D91C5007DD0C4 /* HeroesViewState.swift */,
+				764844A52B0D9B61007DD0C4 /* HeroCellModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7648449C2B0D96EF007DD0C4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7648449F2B0D9731007DD0C4 /* HeroCell.swift */,
+				764844A02B0D9731007DD0C4 /* HeroCell.xib */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		767A49122AEE071F00C0D225 = {
@@ -269,6 +311,7 @@
 				767A49472AEE127700C0D225 /* UIStoryboard+instantiateViewController.swift */,
 				767A494C2AEE155500C0D225 /* UIViewController+StoryboardIdentifer.swift */,
 				767A494E2AEE167D00C0D225 /* UIStoryboard+AppStoryboards.swift */,
+				764844A32B0D9778007DD0C4 /* ReusableView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -327,6 +370,8 @@
 		767A495D2AEE34FD00C0D225 /* Heroes */ = {
 			isa = PBXGroup;
 			children = (
+				764844972B0D91BB007DD0C4 /* Models */,
+				764844942B0D918A007DD0C4 /* ViewModel */,
 				767A495F2AEE351A00C0D225 /* Controller */,
 				767A495E2AEE351600C0D225 /* View */,
 			);
@@ -336,6 +381,7 @@
 		767A495E2AEE351600C0D225 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7648449C2B0D96EF007DD0C4 /* Cells */,
 				767A49602AEE352800C0D225 /* Heroes.storyboard */,
 			);
 			path = View;
@@ -345,6 +391,7 @@
 			isa = PBXGroup;
 			children = (
 				767A49622AEE353300C0D225 /* HeroesViewController.swift */,
+				7648449A2B0D93E9007DD0C4 /* HeroesViewControllerDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -441,6 +488,7 @@
 			name = DragonBallPractica;
 			packageProductDependencies = (
 				767A49792AEECE7500C0D225 /* KeychainSwift */,
+				764844A82B0D9BEC007DD0C4 /* Kingfisher */,
 			);
 			productName = DragonBallPractica;
 			productReference = 767A491B2AEE071F00C0D225 /* DragonBallPractica.app */;
@@ -472,6 +520,7 @@
 			mainGroup = 767A49122AEE071F00C0D225;
 			packageReferences = (
 				767A49782AEECE7500C0D225 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+				764844A72B0D9BEC007DD0C4 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 767A491C2AEE071F00C0D225 /* Products */;
 			projectDirPath = "";
@@ -488,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				767A49522AEE194700C0D225 /* Login.storyboard in Resources */,
+				764844A22B0D9731007DD0C4 /* HeroCell.xib in Resources */,
 				767A492B2AEE072000C0D225 /* LaunchScreen.storyboard in Resources */,
 				767A49282AEE072000C0D225 /* Assets.xcassets in Resources */,
 				767A49612AEE352800C0D225 /* Heroes.storyboard in Resources */,
@@ -504,7 +554,10 @@
 			files = (
 				767A494D2AEE155500C0D225 /* UIViewController+StoryboardIdentifer.swift in Sources */,
 				767A494B2AEE152600C0D225 /* StoryboardIdentifiable.swift in Sources */,
+				764844962B0D9190007DD0C4 /* HeroesViewModel.swift in Sources */,
+				7648449B2B0D93E9007DD0C4 /* HeroesViewControllerDelegate.swift in Sources */,
 				767A49442AEE0FF700C0D225 /* SplashViewModel.swift in Sources */,
+				764844A12B0D9731007DD0C4 /* HeroCell.swift in Sources */,
 				767A49802AEED09000C0D225 /* SecureLocalDataSourceProtocol.swift in Sources */,
 				767A493E2AEE0B7500C0D225 /* SplashViewController.swift in Sources */,
 				767A49832AEED0A100C0D225 /* SecureLocalType.swift in Sources */,
@@ -526,7 +579,10 @@
 				767A495C2AEE289200C0D225 /* LoginViewModel.swift in Sources */,
 				767A49722AEEC55F00C0D225 /* NetworkProviderProtocol.swift in Sources */,
 				767A496E2AEEB4BE00C0D225 /* HTTPMethod.swift in Sources */,
+				764844A62B0D9B61007DD0C4 /* HeroCellModel.swift in Sources */,
+				764844A42B0D9778007DD0C4 /* ReusableView.swift in Sources */,
 				767A49482AEE127700C0D225 /* UIStoryboard+instantiateViewController.swift in Sources */,
+				764844992B0D91C5007DD0C4 /* HeroesViewState.swift in Sources */,
 				767A49562AEE1F9A00C0D225 /* LoginViewController.swift in Sources */,
 				767A497E2AEECF0700C0D225 /* SecureLocalDataSource.swift in Sources */,
 				7648448C2B0D7D7F007DD0C4 /* IsLoggedUseCaseProtocol.swift in Sources */,
@@ -740,6 +796,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		764844A72B0D9BEC007DD0C4 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.10.0;
+			};
+		};
 		767A49782AEECE7500C0D225 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
@@ -751,6 +815,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		764844A82B0D9BEC007DD0C4 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 764844A72B0D9BEC007DD0C4 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		767A49792AEECE7500C0D225 /* KeychainSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 767A49782AEECE7500C0D225 /* XCRemoteSwiftPackageReference "keychain-swift" */;
