@@ -16,7 +16,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let storyboard = UIStoryboard.storyboard(.splash)
         let splashViewController: SplashViewController = storyboard.instantiateViewController()
-        let splashViewModel = SplashViewModel()
+        let isLoggedUseCase = IsLoggedUseCase()
+        let splashViewModel = SplashViewModel(isLoggedUseCase: isLoggedUseCase)
         splashViewController.viewModel = splashViewModel
         let rootViewController = UINavigationController(rootViewController: splashViewController)
         

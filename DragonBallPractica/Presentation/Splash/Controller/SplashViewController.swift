@@ -1,10 +1,3 @@
-//
-//  SplashViewController.swift
-//  DragonBallPractica
-//
-//  Created by Luis Eduardo Herrera Lillo on 29-10-23.
-//
-
 import UIKit
 
 // MARK: - Protocol
@@ -44,6 +37,8 @@ extension SplashViewController {
                     self?.activityIndicator.isHidden = !isLoading
                 case .navigateToLogin:
                     self?.navigateToLogin()
+                case .navigateToHome:
+                    self?.navigateToHome()
                 }
             }
         }
@@ -52,8 +47,19 @@ extension SplashViewController {
     private func navigateToLogin() {
         let storyboard = UIStoryboard.storyboard(.login)
         let viewController: LoginViewController = storyboard.instantiateViewController()
-        let viewModel = LoginViewModel(apiDataSource: ApiDataSource(networkProvider: NetworkProvider()))
+        let loginUseCase = LoginUseCase()
+        let loginValidatorUseCase = LoginValidatorUseCase()
+        let viewModel = LoginViewModel(
+            loginUseCase: loginUseCase,
+            loginValidatorUseCase: loginValidatorUseCase
+        )
         viewController.viewModel = viewModel
+        navigationController?.setViewControllers([viewController], animated: true)
+    }
+    
+    private func navigateToHome() {
+        let storyboard = UIStoryboard.storyboard(.heroes)
+        let viewController: HeroesViewController = storyboard.instantiateViewController()
         navigationController?.setViewControllers([viewController], animated: true)
     }
 }
