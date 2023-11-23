@@ -6,19 +6,24 @@ final class HeroCell: UITableViewCell {
     @IBOutlet weak var heroImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var opacityView: UIView!
+    @IBOutlet weak var containerView: UIView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        heroImageView.layer.cornerRadius = 8
+        let cornerRadius: CGFloat = 8.0
+        
+        heroImageView.layer.cornerRadius = cornerRadius
         heroImageView.clipsToBounds = true
-        heroImageView.layer.shadowRadius = 8
-        heroImageView.layer.shadowOffset = .zero
-        heroImageView.layer.shadowColor = UIColor.gray.cgColor
-        heroImageView.layer.shadowOpacity = 0.4
-        opacityView.layer.cornerRadius = 8
-        opacityView.clipsToBounds = true
+       
+        opacityView.layer.cornerRadius = cornerRadius
         opacityView.layer.opacity = 0.25
+        
+        containerView.layer.cornerRadius = cornerRadius
+        containerView.layer.shadowRadius = cornerRadius
+        containerView.layer.shadowOffset = .zero
+        containerView.layer.shadowColor = UIColor.gray.cgColor
+        containerView.layer.shadowOpacity = 0.4
         
         selectionStyle = .none
     }

@@ -19,17 +19,17 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a3e-6E-0Rz">
-                        <rect key="frame" x="0.0" y="0.0" width="468" height="273"/>
+                        <rect key="frame" x="8" y="8" width="452" height="257"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sqk-mu-GXp">
-                                <rect key="frame" x="8" y="8" width="452" height="257"/>
+                                <rect key="frame" x="0.0" y="0.0" width="452" height="257"/>
                             </imageView>
                             <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VRG-Fm-lgn" userLabel="Opacity View">
-                                <rect key="frame" x="8" y="8" width="452" height="257"/>
+                                <rect key="frame" x="0.0" y="0.0" width="452" height="257"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goku" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzr-2V-15d">
-                                <rect key="frame" x="16" y="237" width="436" height="24"/>
+                                <rect key="frame" x="16" y="221" width="420" height="24"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -41,25 +41,26 @@
                             <constraint firstItem="VRG-Fm-lgn" firstAttribute="leading" secondItem="sqk-mu-GXp" secondAttribute="leading" id="CL9-zD-sgt"/>
                             <constraint firstItem="VRG-Fm-lgn" firstAttribute="top" secondItem="sqk-mu-GXp" secondAttribute="top" id="Qkn-LS-IBC"/>
                             <constraint firstAttribute="trailing" secondItem="kzr-2V-15d" secondAttribute="trailing" constant="16" id="SWK-ep-5x4"/>
-                            <constraint firstAttribute="bottom" secondItem="sqk-mu-GXp" secondAttribute="bottom" constant="8" id="UF8-KO-dum"/>
+                            <constraint firstAttribute="bottom" secondItem="sqk-mu-GXp" secondAttribute="bottom" id="UF8-KO-dum"/>
                             <constraint firstItem="kzr-2V-15d" firstAttribute="leading" secondItem="a3e-6E-0Rz" secondAttribute="leading" constant="16" id="hTO-cp-7lk"/>
-                            <constraint firstItem="sqk-mu-GXp" firstAttribute="top" secondItem="a3e-6E-0Rz" secondAttribute="top" constant="8" id="iov-Ex-uLY"/>
-                            <constraint firstItem="sqk-mu-GXp" firstAttribute="leading" secondItem="a3e-6E-0Rz" secondAttribute="leading" constant="8" id="moT-N4-saP"/>
-                            <constraint firstAttribute="trailing" secondItem="sqk-mu-GXp" secondAttribute="trailing" constant="8" id="nJ2-xr-coL"/>
+                            <constraint firstItem="sqk-mu-GXp" firstAttribute="top" secondItem="a3e-6E-0Rz" secondAttribute="top" id="iov-Ex-uLY"/>
+                            <constraint firstItem="sqk-mu-GXp" firstAttribute="leading" secondItem="a3e-6E-0Rz" secondAttribute="leading" id="moT-N4-saP"/>
+                            <constraint firstAttribute="trailing" secondItem="sqk-mu-GXp" secondAttribute="trailing" id="nJ2-xr-coL"/>
                             <constraint firstItem="VRG-Fm-lgn" firstAttribute="trailing" secondItem="sqk-mu-GXp" secondAttribute="trailing" id="nZS-Gj-vko"/>
                             <constraint firstAttribute="bottom" secondItem="kzr-2V-15d" secondAttribute="bottom" constant="12" id="t1a-UW-0zw"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="a3e-6E-0Rz" secondAttribute="trailing" id="0YA-v5-53R"/>
-                    <constraint firstAttribute="bottom" secondItem="a3e-6E-0Rz" secondAttribute="bottom" id="Rqe-MS-7q4"/>
-                    <constraint firstItem="a3e-6E-0Rz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="VD0-Cd-t2C"/>
-                    <constraint firstItem="a3e-6E-0Rz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Zak-FU-27b"/>
+                    <constraint firstAttribute="trailing" secondItem="a3e-6E-0Rz" secondAttribute="trailing" constant="8" id="0YA-v5-53R"/>
+                    <constraint firstAttribute="bottom" secondItem="a3e-6E-0Rz" secondAttribute="bottom" constant="8" id="Rqe-MS-7q4"/>
+                    <constraint firstItem="a3e-6E-0Rz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="VD0-Cd-t2C"/>
+                    <constraint firstItem="a3e-6E-0Rz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="Zak-FU-27b"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="containerView" destination="a3e-6E-0Rz" id="Sip-GO-mJm"/>
                 <outlet property="heroImageView" destination="sqk-mu-GXp" id="IEO-KH-IC1"/>
                 <outlet property="nameLabel" destination="kzr-2V-15d" id="h9z-KH-GCU"/>
                 <outlet property="opacityView" destination="VRG-Fm-lgn" id="qPt-Rh-bX2"/>
