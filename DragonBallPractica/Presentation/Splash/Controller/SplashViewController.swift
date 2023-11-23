@@ -60,6 +60,7 @@ extension SplashViewController {
     private func navigateToHome() {
         let storyboard = UIStoryboard.storyboard(.heroes)
         let viewController: HeroesViewController = storyboard.instantiateViewController()
+        viewController.viewModel = HeroesViewModel()
         navigationController?.setViewControllers([viewController], animated: true)
     }
 }
