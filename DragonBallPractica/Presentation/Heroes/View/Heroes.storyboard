@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,10 +21,28 @@
                                 <rect key="frame" x="0.0" y="59" width="393" height="793"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qzd-hX-3dC">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="QEF-yr-HVQ">
+                                        <rect key="frame" x="178" y="378" width="37" height="37"/>
+                                        <color key="color" systemColor="systemBlueColor"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="QEF-yr-HVQ" firstAttribute="centerX" secondItem="Qzd-hX-3dC" secondAttribute="centerX" id="GYf-Er-LtZ"/>
+                                    <constraint firstItem="QEF-yr-HVQ" firstAttribute="centerY" secondItem="Qzd-hX-3dC" secondAttribute="centerY" id="olJ-J6-CiC"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Qzd-hX-3dC" secondAttribute="trailing" id="A03-Zx-OQ9"/>
+                            <constraint firstAttribute="bottom" secondItem="Qzd-hX-3dC" secondAttribute="bottom" id="B8V-fS-e43"/>
+                            <constraint firstItem="Qzd-hX-3dC" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="hmc-Lb-EdO"/>
+                            <constraint firstItem="Qzd-hX-3dC" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="icL-Jf-YUe"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="tQG-MO-egM" secondAttribute="trailing" id="miM-n5-59J"/>
                             <constraint firstItem="tQG-MO-egM" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="pP7-GB-CFg"/>
                             <constraint firstAttribute="bottom" secondItem="tQG-MO-egM" secondAttribute="bottom" id="ryl-Ma-kYq"/>
@@ -31,17 +50,21 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="loadingView" destination="Qzd-hX-3dC" id="zwc-ht-45c"/>
                         <outlet property="tableView" destination="tQG-MO-egM" id="FLF-Zd-h77"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140" y="-2"/>
+            <point key="canvasLocation" x="139.69465648854961" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
