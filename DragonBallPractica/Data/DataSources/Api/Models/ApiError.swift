@@ -15,4 +15,5 @@ enum ApiError: Error {
     case encodingData
     case parsingUrl
     case parsingHeaders
+    case noToken
 }

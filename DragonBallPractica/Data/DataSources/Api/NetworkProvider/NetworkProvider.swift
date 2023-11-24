@@ -1,14 +1,7 @@
-//
-//  WebService.swift
-//  DragonBallPractica
-//
-//  Created by Luis Eduardo Herrera Lillo on 29-10-23.
-//
-
 import Foundation
 
 final class NetworkProvider {
-    private let baseUrl = URL(string: "https://dragonball.keepcoding.education/api")
+    private let baseUrl = URL(string: ApiConstants.baseURL)
 }
 
 extension NetworkProvider: NetworkProviderProtocol {
@@ -60,8 +53,8 @@ extension NetworkProvider: NetworkProviderProtocol {
             return
         }
         request.setValue(
-            "application/json; charset=utf-8",
-            forHTTPHeaderField: "Content-Type"
+            ApiConstants.Header.Value.aplicationJson,
+            forHTTPHeaderField: ApiConstants.Header.Key.contentType
         )
         var currentHeaders = request.allHTTPHeaderFields
         currentHeaders?.merge(additionalHeaders ?? [:]) { _, second in second }
@@ -69,6 +62,7 @@ extension NetworkProvider: NetworkProviderProtocol {
         
         URLSession.shared.dataTask(with: request) { data, response, error in
             print("response: \(String(describing: response))")
+            print("request:", request.allHTTPHeaderFields ?? "")
             
             let result: Result<Data, ApiError>
             
