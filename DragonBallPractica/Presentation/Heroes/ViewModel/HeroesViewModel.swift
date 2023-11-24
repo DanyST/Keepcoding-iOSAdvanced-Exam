@@ -1,9 +1,14 @@
 import Foundation
 
 final class HeroesViewModel {
+    private let getHeroesUseCase: GetHeroesUseCaseProtocol
     private var _viewState: ((HeroesViewState) -> Void)?
     
-//    private var heroes = [Hero]()
+    init(getHeroesUseCase: GetHeroesUseCaseProtocol) {
+        self.getHeroesUseCase = getHeroesUseCase
+    }
+    
+    private var heroes = [Hero]()
     
     private func loadData() {
         viewState?(.loading(true))
@@ -11,10 +16,16 @@ final class HeroesViewModel {
         DispatchQueue.global().async { [weak self] in
             guard let self else { return }
             
-            // TODO: Obtener los heroes del backend y darle valor a la propiedad heroes
-            DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(2)) {
-                self.viewState?(.updateData)
+            self.getHeroesUseCase.execute(name: nil) { result in
                 self.viewState?(.loading(false))
+                switch result {
+                case let .success(heroes):
+                    self.heroes = heroes
+                    self.viewState?(.updateData)
+                case let .failure(error):
+                    self.heroes = []
+                    print("Error: \(error)")
+                }
             }
         }
     }
@@ -35,7 +46,7 @@ extension HeroesViewModel: HeroesViewControllerDelegate {
     }
     
     var dataCount: Int {
-        2
+        heroes.count
     }
     
     func onViewsLoaded() {
@@ -43,10 +54,15 @@ extension HeroesViewModel: HeroesViewControllerDelegate {
     }
     
     func heroCellModel(at index: Int) -> HeroCellModel? {
-        HeroCellModel(
-            photo: "https://cdn.alfabetajuega.com/alfabetajuega/2020/12/goku1.jpg?width=300",
-            name: "Goku"
+        guard heroes.indices.contains(index) else {
+            return nil
+        }
+        let hero = heroes[index]
+        let heroCellModel = HeroCellModel(
+            photo: hero.photo,
+            name: hero.name
         )
+        return heroCellModel
     }
     
     func onItemSelected(at index: Int) {
