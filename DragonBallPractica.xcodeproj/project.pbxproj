@@ -41,13 +41,13 @@
 		767A495C2AEE289200C0D225 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A495B2AEE289200C0D225 /* LoginViewModel.swift */; };
 		767A49612AEE352800C0D225 /* Heroes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767A49602AEE352800C0D225 /* Heroes.storyboard */; };
 		767A49632AEE353300C0D225 /* HeroesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49622AEE353300C0D225 /* HeroesViewController.swift */; };
-		767A49672AEEB36900C0D225 /* ApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49662AEEB36900C0D225 /* ApiDataSource.swift */; };
+		767A49672AEEB36900C0D225 /* DragonBallApiDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49662AEEB36900C0D225 /* DragonBallApiDataSource.swift */; };
 		767A496A2AEEB39D00C0D225 /* DragonBallEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49692AEEB39D00C0D225 /* DragonBallEndpoint.swift */; };
 		767A496C2AEEB3AF00C0D225 /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A496B2AEEB3AF00C0D225 /* NetworkProvider.swift */; };
 		767A496E2AEEB4BE00C0D225 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A496D2AEEB4BE00C0D225 /* HTTPMethod.swift */; };
 		767A49702AEEC0C200C0D225 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A496F2AEEC0C200C0D225 /* ApiError.swift */; };
 		767A49722AEEC55F00C0D225 /* NetworkProviderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49712AEEC55F00C0D225 /* NetworkProviderProtocol.swift */; };
-		767A49752AEEC5F100C0D225 /* ApiDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49742AEEC5F100C0D225 /* ApiDataSourceProtocol.swift */; };
+		767A49752AEEC5F100C0D225 /* DragonBallApiDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49742AEEC5F100C0D225 /* DragonBallApiDataSourceProtocol.swift */; };
 		767A497A2AEECE7500C0D225 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 767A49792AEECE7500C0D225 /* KeychainSwift */; };
 		767A497E2AEECF0700C0D225 /* SecureLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A497D2AEECF0700C0D225 /* SecureLocalDataSource.swift */; };
 		767A49802AEED09000C0D225 /* SecureLocalDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A497F2AEED09000C0D225 /* SecureLocalDataSourceProtocol.swift */; };
@@ -97,13 +97,13 @@
 		767A495B2AEE289200C0D225 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		767A49602AEE352800C0D225 /* Heroes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Heroes.storyboard; sourceTree = "<group>"; };
 		767A49622AEE353300C0D225 /* HeroesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesViewController.swift; sourceTree = "<group>"; };
-		767A49662AEEB36900C0D225 /* ApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSource.swift; sourceTree = "<group>"; };
+		767A49662AEEB36900C0D225 /* DragonBallApiDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallApiDataSource.swift; sourceTree = "<group>"; };
 		767A49692AEEB39D00C0D225 /* DragonBallEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallEndpoint.swift; sourceTree = "<group>"; };
 		767A496B2AEEB3AF00C0D225 /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 		767A496D2AEEB4BE00C0D225 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		767A496F2AEEC0C200C0D225 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
 		767A49712AEEC55F00C0D225 /* NetworkProviderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProviderProtocol.swift; sourceTree = "<group>"; };
-		767A49742AEEC5F100C0D225 /* ApiDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiDataSourceProtocol.swift; sourceTree = "<group>"; };
+		767A49742AEEC5F100C0D225 /* DragonBallApiDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallApiDataSourceProtocol.swift; sourceTree = "<group>"; };
 		767A497D2AEECF0700C0D225 /* SecureLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureLocalDataSource.swift; sourceTree = "<group>"; };
 		767A497F2AEED09000C0D225 /* SecureLocalDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureLocalDataSourceProtocol.swift; sourceTree = "<group>"; };
 		767A49822AEED0A100C0D225 /* SecureLocalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureLocalType.swift; sourceTree = "<group>"; };
@@ -129,6 +129,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		763A656D2B1033E9008C0560 /* DatabaseLocalDataSource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DatabaseLocalDataSource;
+			sourceTree = "<group>";
+		};
 		7648447D2B0D78FB007DD0C4 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,8 +435,8 @@
 				767A49772AEEC69000C0D225 /* Models */,
 				767A49682AEEB38B00C0D225 /* NetworkProvider */,
 				767A49732AEEC58900C0D225 /* Endpoint */,
-				767A49662AEEB36900C0D225 /* ApiDataSource.swift */,
-				767A49742AEEC5F100C0D225 /* ApiDataSourceProtocol.swift */,
+				767A49662AEEB36900C0D225 /* DragonBallApiDataSource.swift */,
+				767A49742AEEC5F100C0D225 /* DragonBallApiDataSourceProtocol.swift */,
 				76F6FFDC2B0F001000DA3870 /* ApiConstants.swift */,
 			);
 			path = Api;
@@ -475,6 +482,7 @@
 		767A497C2AEECECB00C0D225 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				763A656D2B1033E9008C0560 /* DatabaseLocalDataSource */,
 				767A497B2AEECEBD00C0D225 /* SecureLocalDataSource */,
 			);
 			path = Local;
@@ -629,13 +637,13 @@
 				764844812B0D7956007DD0C4 /* DragonBallRepositoryProtocol.swift in Sources */,
 				76F6FFD82B0EF60100DA3870 /* HeroDTOToDomainMapper.swift in Sources */,
 				767A491F2AEE071F00C0D225 /* AppDelegate.swift in Sources */,
-				767A49672AEEB36900C0D225 /* ApiDataSource.swift in Sources */,
+				767A49672AEEB36900C0D225 /* DragonBallApiDataSource.swift in Sources */,
 				7648448A2B0D7D77007DD0C4 /* IsLoggedUseCase.swift in Sources */,
 				76F6FFDA2B0EFBE300DA3870 /* HeroDTOToDomainMapperProtocol.swift in Sources */,
 				764844862B0D7BFE007DD0C4 /* LoginUseCase.swift in Sources */,
 				767A49212AEE071F00C0D225 /* SceneDelegate.swift in Sources */,
 				7648447F2B0D794A007DD0C4 /* DragonBallRepository.swift in Sources */,
-				767A49752AEEC5F100C0D225 /* ApiDataSourceProtocol.swift in Sources */,
+				767A49752AEEC5F100C0D225 /* DragonBallApiDataSourceProtocol.swift in Sources */,
 				767A494F2AEE167D00C0D225 /* UIStoryboard+AppStoryboards.swift in Sources */,
 				764844932B0D7F1C007DD0C4 /* LoginValidatorUseCaseProtocol.swift in Sources */,
 				76F6FFCC2B0EEDA900DA3870 /* GetHeroesUseCase.swift in Sources */,

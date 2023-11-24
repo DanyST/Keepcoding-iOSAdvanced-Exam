@@ -1,6 +1,6 @@
 import Foundation
 
-final class ApiDataSource {
+final class DragonBallApiDataSource {
     private let networkProvider: NetworkProviderProtocol
     
     init(networkProvider: NetworkProviderProtocol) {
@@ -8,7 +8,7 @@ final class ApiDataSource {
     }
 }
 
-extension ApiDataSource: ApiDataSourceProtocol {
+extension DragonBallApiDataSource: DragonBallApiDataSourceProtocol {
     func login(
         for user: String,
         with password: String,

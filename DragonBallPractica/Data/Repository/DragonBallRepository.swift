@@ -1,12 +1,12 @@
 import Foundation
 
 struct DragonBallRepository: DragonBallRepositoryProtocol {
-    private let apiRestDataSource: ApiDataSourceProtocol
+    private let apiRestDataSource: DragonBallApiDataSourceProtocol
     private let secureLocalDataSource: SecureLocalDataSourceProtocol
     private let heroDTOToDomainMapper: HeroDTOToDomainMapperProtocol
     
     init(
-        apiRestDataSource: ApiDataSourceProtocol = ApiDataSource(networkProvider: NetworkProvider()),
+        apiRestDataSource: DragonBallApiDataSourceProtocol = DragonBallApiDataSource(networkProvider: NetworkProvider()),
         secureLocalDataSource: SecureLocalDataSourceProtocol = SecureLocalDataSource(),
         heroDTOToDomainMapper: HeroDTOToDomainMapperProtocol = HeroDTOToDomainMapper()
     ) {

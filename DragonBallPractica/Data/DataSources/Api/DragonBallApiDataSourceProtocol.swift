@@ -1,6 +1,6 @@
 import Foundation
 
-protocol ApiDataSourceProtocol {
+protocol DragonBallApiDataSourceProtocol {
     func login(
         for user: String,
         with password: String,
