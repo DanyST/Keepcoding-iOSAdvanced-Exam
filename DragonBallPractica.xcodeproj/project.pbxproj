@@ -52,6 +52,13 @@
 		767A497E2AEECF0700C0D225 /* SecureLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A497D2AEECF0700C0D225 /* SecureLocalDataSource.swift */; };
 		767A49802AEED09000C0D225 /* SecureLocalDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A497F2AEED09000C0D225 /* SecureLocalDataSourceProtocol.swift */; };
 		767A49832AEED0A100C0D225 /* SecureLocalType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 767A49822AEED0A100C0D225 /* SecureLocalType.swift */; };
+		76F6FFCC2B0EEDA900DA3870 /* GetHeroesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FFCB2B0EEDA900DA3870 /* GetHeroesUseCase.swift */; };
+		76F6FFCE2B0EEDB700DA3870 /* GetHeroesUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FFCD2B0EEDB700DA3870 /* GetHeroesUseCaseProtocol.swift */; };
+		76F6FFD12B0EF2BC00DA3870 /* HeroDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FFD02B0EF2BC00DA3870 /* HeroDTO.swift */; };
+		76F6FFD52B0EF50B00DA3870 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FFD42B0EF50B00DA3870 /* Hero.swift */; };
+		76F6FFD82B0EF60100DA3870 /* HeroDTOToDomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FFD72B0EF60100DA3870 /* HeroDTOToDomainMapper.swift */; };
+		76F6FFDA2B0EFBE300DA3870 /* HeroDTOToDomainMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FFD92B0EFBE300DA3870 /* HeroDTOToDomainMapperProtocol.swift */; };
+		76F6FFDD2B0F001000DA3870 /* ApiConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FFDC2B0F001000DA3870 /* ApiConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +107,13 @@
 		767A497D2AEECF0700C0D225 /* SecureLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureLocalDataSource.swift; sourceTree = "<group>"; };
 		767A497F2AEED09000C0D225 /* SecureLocalDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureLocalDataSourceProtocol.swift; sourceTree = "<group>"; };
 		767A49822AEED0A100C0D225 /* SecureLocalType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureLocalType.swift; sourceTree = "<group>"; };
+		76F6FFCB2B0EEDA900DA3870 /* GetHeroesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeroesUseCase.swift; sourceTree = "<group>"; };
+		76F6FFCD2B0EEDB700DA3870 /* GetHeroesUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeroesUseCaseProtocol.swift; sourceTree = "<group>"; };
+		76F6FFD02B0EF2BC00DA3870 /* HeroDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDTO.swift; sourceTree = "<group>"; };
+		76F6FFD42B0EF50B00DA3870 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		76F6FFD72B0EF60100DA3870 /* HeroDTOToDomainMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDTOToDomainMapper.swift; sourceTree = "<group>"; };
+		76F6FFD92B0EFBE300DA3870 /* HeroDTOToDomainMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDTOToDomainMapperProtocol.swift; sourceTree = "<group>"; };
+		76F6FFDC2B0F001000DA3870 /* ApiConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +141,7 @@
 		764844822B0D7BD8007DD0C4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				76F6FFD32B0EF50500DA3870 /* Models */,
 				764844832B0D7BE3007DD0C4 /* UseCases */,
 			);
 			path = Domain;
@@ -135,6 +150,7 @@
 		764844832B0D7BE3007DD0C4 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				76F6FFCA2B0EED9F00DA3870 /* GetHeroesUseCase */,
 				764844912B0D7F09007DD0C4 /* LoginValidatorUseCase */,
 				7648448D2B0D7D88007DD0C4 /* LoginUseCase */,
 				7648448E2B0D7D9E007DD0C4 /* IsLoggedUseCase */,
@@ -400,8 +416,8 @@
 			isa = PBXGroup;
 			children = (
 				7648447D2B0D78FB007DD0C4 /* Repository */,
-				767A497C2AEECECB00C0D225 /* Local */,
-				767A49652AEEB35400C0D225 /* Api */,
+				76F6FFD22B0EF3F900DA3870 /* Mappers */,
+				76F6FFD62B0EF58200DA3870 /* DataSources */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -414,6 +430,7 @@
 				767A49732AEEC58900C0D225 /* Endpoint */,
 				767A49662AEEB36900C0D225 /* ApiDataSource.swift */,
 				767A49742AEEC5F100C0D225 /* ApiDataSourceProtocol.swift */,
+				76F6FFDC2B0F001000DA3870 /* ApiConstants.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -438,6 +455,7 @@
 		767A49772AEEC69000C0D225 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				76F6FFCF2B0EEE8A00DA3870 /* DTO */,
 				767A496D2AEEB4BE00C0D225 /* HTTPMethod.swift */,
 				767A496F2AEEC0C200C0D225 /* ApiError.swift */,
 			);
@@ -468,6 +486,49 @@
 				767A49822AEED0A100C0D225 /* SecureLocalType.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		76F6FFCA2B0EED9F00DA3870 /* GetHeroesUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				76F6FFCB2B0EEDA900DA3870 /* GetHeroesUseCase.swift */,
+				76F6FFCD2B0EEDB700DA3870 /* GetHeroesUseCaseProtocol.swift */,
+			);
+			path = GetHeroesUseCase;
+			sourceTree = "<group>";
+		};
+		76F6FFCF2B0EEE8A00DA3870 /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				76F6FFD02B0EF2BC00DA3870 /* HeroDTO.swift */,
+			);
+			path = DTO;
+			sourceTree = "<group>";
+		};
+		76F6FFD22B0EF3F900DA3870 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				76F6FFD72B0EF60100DA3870 /* HeroDTOToDomainMapper.swift */,
+				76F6FFD92B0EFBE300DA3870 /* HeroDTOToDomainMapperProtocol.swift */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		76F6FFD32B0EF50500DA3870 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				76F6FFD42B0EF50B00DA3870 /* Hero.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		76F6FFD62B0EF58200DA3870 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				767A497C2AEECECB00C0D225 /* Local */,
+				767A49652AEEB35400C0D225 /* Api */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -552,6 +613,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76F6FFDD2B0F001000DA3870 /* ApiConstants.swift in Sources */,
 				767A494D2AEE155500C0D225 /* UIViewController+StoryboardIdentifer.swift in Sources */,
 				767A494B2AEE152600C0D225 /* StoryboardIdentifiable.swift in Sources */,
 				764844962B0D9190007DD0C4 /* HeroesViewModel.swift in Sources */,
@@ -565,20 +627,26 @@
 				767A49702AEEC0C200C0D225 /* ApiError.swift in Sources */,
 				764844902B0D7EBB007DD0C4 /* LoginValidatorUseCase.swift in Sources */,
 				764844812B0D7956007DD0C4 /* DragonBallRepositoryProtocol.swift in Sources */,
+				76F6FFD82B0EF60100DA3870 /* HeroDTOToDomainMapper.swift in Sources */,
 				767A491F2AEE071F00C0D225 /* AppDelegate.swift in Sources */,
 				767A49672AEEB36900C0D225 /* ApiDataSource.swift in Sources */,
 				7648448A2B0D7D77007DD0C4 /* IsLoggedUseCase.swift in Sources */,
+				76F6FFDA2B0EFBE300DA3870 /* HeroDTOToDomainMapperProtocol.swift in Sources */,
 				764844862B0D7BFE007DD0C4 /* LoginUseCase.swift in Sources */,
 				767A49212AEE071F00C0D225 /* SceneDelegate.swift in Sources */,
 				7648447F2B0D794A007DD0C4 /* DragonBallRepository.swift in Sources */,
 				767A49752AEEC5F100C0D225 /* ApiDataSourceProtocol.swift in Sources */,
 				767A494F2AEE167D00C0D225 /* UIStoryboard+AppStoryboards.swift in Sources */,
 				764844932B0D7F1C007DD0C4 /* LoginValidatorUseCaseProtocol.swift in Sources */,
+				76F6FFCC2B0EEDA900DA3870 /* GetHeroesUseCase.swift in Sources */,
 				767A49592AEE253700C0D225 /* LoginViewState.swift in Sources */,
 				767A496C2AEEB3AF00C0D225 /* NetworkProvider.swift in Sources */,
 				767A495C2AEE289200C0D225 /* LoginViewModel.swift in Sources */,
 				767A49722AEEC55F00C0D225 /* NetworkProviderProtocol.swift in Sources */,
+				76F6FFD52B0EF50B00DA3870 /* Hero.swift in Sources */,
 				767A496E2AEEB4BE00C0D225 /* HTTPMethod.swift in Sources */,
+				76F6FFCE2B0EEDB700DA3870 /* GetHeroesUseCaseProtocol.swift in Sources */,
+				76F6FFD12B0EF2BC00DA3870 /* HeroDTO.swift in Sources */,
 				764844A62B0D9B61007DD0C4 /* HeroCellModel.swift in Sources */,
 				764844A42B0D9778007DD0C4 /* ReusableView.swift in Sources */,
 				767A49482AEE127700C0D225 /* UIStoryboard+instantiateViewController.swift in Sources */,
