@@ -7,6 +7,8 @@ protocol DragonBallRepositoryProtocol {
         then completion: @escaping (Result<String, ApiError>) -> Void
     )
     
+    func getHeroes(withName name: String?, completion: @escaping (Result<Heroes, ApiError>) -> Void)
+    
     @discardableResult
     func saveLocalSecure(_ keyType: SecureLocalType, value: String) -> Bool
     
