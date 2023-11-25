@@ -13,4 +13,7 @@ protocol DragonBallRepositoryProtocol {
     func saveLocalSecure(_ keyType: SecureLocalType, value: String) -> Bool
     
     func getLocalSecure(_ keyType: SecureLocalType) -> String?
+    
+    func saveHeroesInLocalDatabase(_ heroes: Heroes)
+    func getHeroesFromDatabase() -> Heroes
 }

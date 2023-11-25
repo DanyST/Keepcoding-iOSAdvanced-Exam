@@ -3,15 +3,18 @@ import Foundation
 struct DragonBallRepository: DragonBallRepositoryProtocol {
     private let apiRestDataSource: DragonBallApiDataSourceProtocol
     private let secureLocalDataSource: SecureLocalDataSourceProtocol
+    private let localDatabaseDataSource: LocalDatabaseDataSourceProtocol
     private let heroDTOToDomainMapper: HeroDTOToDomainMapperProtocol
     
     init(
         apiRestDataSource: DragonBallApiDataSourceProtocol = DragonBallApiDataSource(networkProvider: NetworkProvider()),
         secureLocalDataSource: SecureLocalDataSourceProtocol = SecureLocalDataSource(),
+        localDatabaseDataSource: LocalDatabaseDataSourceProtocol = LocalDatabaseDataSource(),
         heroDTOToDomainMapper: HeroDTOToDomainMapperProtocol = HeroDTOToDomainMapper()
     ) {
         self.apiRestDataSource = apiRestDataSource
         self.secureLocalDataSource = secureLocalDataSource
+        self.localDatabaseDataSource = localDatabaseDataSource
         self.heroDTOToDomainMapper = heroDTOToDomainMapper
     }
     
@@ -37,6 +40,14 @@ struct DragonBallRepository: DragonBallRepositoryProtocol {
                 completion(.failure(error))
             }
         }
+    }
+    
+    func saveHeroesInLocalDatabase(_ heroes: Heroes) {
+        localDatabaseDataSource.add(heroes: heroes)
+    }
+    
+    func getHeroesFromDatabase() -> Heroes {
+        localDatabaseDataSource.getHeroes()
     }
     
     @discardableResult
