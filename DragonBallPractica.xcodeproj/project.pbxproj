@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		763A65702B1034D4008C0560 /* DragonBallModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 763A656E2B1034D4008C0560 /* DragonBallModel.xcdatamodeld */; };
+		763A65722B1034E6008C0560 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A65712B1034E6008C0560 /* CoreDataStack.swift */; };
+		763A65742B103745008C0560 /* LocalDatabaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A65732B103745008C0560 /* LocalDatabaseDataSource.swift */; };
+		763A65762B103755008C0560 /* LocalDatabaseDataSourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A65752B103755008C0560 /* LocalDatabaseDataSourceProtocol.swift */; };
+		763A657D2B103CEC008C0560 /* HeroDAOToDomainMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A657C2B103CEC008C0560 /* HeroDAOToDomainMapper.swift */; };
+		763A65802B103D5B008C0560 /* HeroToDAOMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A657F2B103D5B008C0560 /* HeroToDAOMapper.swift */; };
+		763A65832B103D6C008C0560 /* HeroToDAOMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A65822B103D6C008C0560 /* HeroToDAOMapperProtocol.swift */; };
+		763A65852B103E5D008C0560 /* HeroDAOToDomainMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A65842B103E5D008C0560 /* HeroDAOToDomainMapperProtocol.swift */; };
 		7648447F2B0D794A007DD0C4 /* DragonBallRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7648447E2B0D794A007DD0C4 /* DragonBallRepository.swift */; };
 		764844812B0D7956007DD0C4 /* DragonBallRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764844802B0D7956007DD0C4 /* DragonBallRepositoryProtocol.swift */; };
 		764844862B0D7BFE007DD0C4 /* LoginUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 764844852B0D7BFE007DD0C4 /* LoginUseCase.swift */; };
@@ -62,6 +70,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		763A656F2B1034D4008C0560 /* DragonBallModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DragonBallModel.xcdatamodel; sourceTree = "<group>"; };
+		763A65712B1034E6008C0560 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		763A65732B103745008C0560 /* LocalDatabaseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatabaseDataSource.swift; sourceTree = "<group>"; };
+		763A65752B103755008C0560 /* LocalDatabaseDataSourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDatabaseDataSourceProtocol.swift; sourceTree = "<group>"; };
+		763A657C2B103CEC008C0560 /* HeroDAOToDomainMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDAOToDomainMapper.swift; sourceTree = "<group>"; };
+		763A657F2B103D5B008C0560 /* HeroToDAOMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroToDAOMapper.swift; sourceTree = "<group>"; };
+		763A65822B103D6C008C0560 /* HeroToDAOMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroToDAOMapperProtocol.swift; sourceTree = "<group>"; };
+		763A65842B103E5D008C0560 /* HeroDAOToDomainMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDAOToDomainMapperProtocol.swift; sourceTree = "<group>"; };
 		7648447E2B0D794A007DD0C4 /* DragonBallRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallRepository.swift; sourceTree = "<group>"; };
 		764844802B0D7956007DD0C4 /* DragonBallRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallRepositoryProtocol.swift; sourceTree = "<group>"; };
 		764844852B0D7BFE007DD0C4 /* LoginUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginUseCase.swift; sourceTree = "<group>"; };
@@ -132,8 +148,48 @@
 		763A656D2B1033E9008C0560 /* DatabaseLocalDataSource */ = {
 			isa = PBXGroup;
 			children = (
+				763A657B2B103CD7008C0560 /* Mappers */,
+				763A65772B10375E008C0560 /* CoreData */,
+				763A65732B103745008C0560 /* LocalDatabaseDataSource.swift */,
+				763A65752B103755008C0560 /* LocalDatabaseDataSourceProtocol.swift */,
 			);
 			path = DatabaseLocalDataSource;
+			sourceTree = "<group>";
+		};
+		763A65772B10375E008C0560 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				763A656E2B1034D4008C0560 /* DragonBallModel.xcdatamodeld */,
+				763A65712B1034E6008C0560 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		763A657B2B103CD7008C0560 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				763A65812B103D60008C0560 /* HeroToDAOMapper */,
+				763A657E2B103CF2008C0560 /* HeroDAOToDomainMapper */,
+			);
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		763A657E2B103CF2008C0560 /* HeroDAOToDomainMapper */ = {
+			isa = PBXGroup;
+			children = (
+				763A657C2B103CEC008C0560 /* HeroDAOToDomainMapper.swift */,
+				763A65842B103E5D008C0560 /* HeroDAOToDomainMapperProtocol.swift */,
+			);
+			path = HeroDAOToDomainMapper;
+			sourceTree = "<group>";
+		};
+		763A65812B103D60008C0560 /* HeroToDAOMapper */ = {
+			isa = PBXGroup;
+			children = (
+				763A657F2B103D5B008C0560 /* HeroToDAOMapper.swift */,
+				763A65822B103D6C008C0560 /* HeroToDAOMapperProtocol.swift */,
+			);
+			path = HeroToDAOMapper;
 			sourceTree = "<group>";
 		};
 		7648447D2B0D78FB007DD0C4 /* Repository */ = {
@@ -622,8 +678,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				76F6FFDD2B0F001000DA3870 /* ApiConstants.swift in Sources */,
+				763A65722B1034E6008C0560 /* CoreDataStack.swift in Sources */,
+				763A65852B103E5D008C0560 /* HeroDAOToDomainMapperProtocol.swift in Sources */,
 				767A494D2AEE155500C0D225 /* UIViewController+StoryboardIdentifer.swift in Sources */,
+				763A65802B103D5B008C0560 /* HeroToDAOMapper.swift in Sources */,
 				767A494B2AEE152600C0D225 /* StoryboardIdentifiable.swift in Sources */,
+				763A657D2B103CEC008C0560 /* HeroDAOToDomainMapper.swift in Sources */,
+				763A65702B1034D4008C0560 /* DragonBallModel.xcdatamodeld in Sources */,
 				764844962B0D9190007DD0C4 /* HeroesViewModel.swift in Sources */,
 				7648449B2B0D93E9007DD0C4 /* HeroesViewControllerDelegate.swift in Sources */,
 				767A49442AEE0FF700C0D225 /* SplashViewModel.swift in Sources */,
@@ -632,6 +693,7 @@
 				767A493E2AEE0B7500C0D225 /* SplashViewController.swift in Sources */,
 				767A49832AEED0A100C0D225 /* SecureLocalType.swift in Sources */,
 				767A496A2AEEB39D00C0D225 /* DragonBallEndpoint.swift in Sources */,
+				763A65762B103755008C0560 /* LocalDatabaseDataSourceProtocol.swift in Sources */,
 				767A49702AEEC0C200C0D225 /* ApiError.swift in Sources */,
 				764844902B0D7EBB007DD0C4 /* LoginValidatorUseCase.swift in Sources */,
 				764844812B0D7956007DD0C4 /* DragonBallRepositoryProtocol.swift in Sources */,
@@ -650,7 +712,9 @@
 				767A49592AEE253700C0D225 /* LoginViewState.swift in Sources */,
 				767A496C2AEEB3AF00C0D225 /* NetworkProvider.swift in Sources */,
 				767A495C2AEE289200C0D225 /* LoginViewModel.swift in Sources */,
+				763A65742B103745008C0560 /* LocalDatabaseDataSource.swift in Sources */,
 				767A49722AEEC55F00C0D225 /* NetworkProviderProtocol.swift in Sources */,
+				763A65832B103D6C008C0560 /* HeroToDAOMapperProtocol.swift in Sources */,
 				76F6FFD52B0EF50B00DA3870 /* Hero.swift in Sources */,
 				767A496E2AEEB4BE00C0D225 /* HTTPMethod.swift in Sources */,
 				76F6FFCE2B0EEDB700DA3870 /* GetHeroesUseCaseProtocol.swift in Sources */,
@@ -902,6 +966,19 @@
 			productName = KeychainSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		763A656E2B1034D4008C0560 /* DragonBallModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				763A656F2B1034D4008C0560 /* DragonBallModel.xcdatamodel */,
+			);
+			currentVersion = 763A656F2B1034D4008C0560 /* DragonBallModel.xcdatamodel */;
+			path = DragonBallModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 767A49132AEE071F00C0D225 /* Project object */;
 }
