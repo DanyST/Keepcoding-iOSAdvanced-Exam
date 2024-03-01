@@ -1,7 +1,7 @@
 import Foundation
 
 final class NetworkProvider {
-    private let baseUrl = URL(string: ApiConstants.baseURL)
+    private let baseUrl = URL(string: NetworkConstants.baseURL)
 }
 
 extension NetworkProvider: NetworkProviderProtocol {
@@ -53,8 +53,8 @@ extension NetworkProvider: NetworkProviderProtocol {
             return
         }
         request.setValue(
-            ApiConstants.Header.Value.aplicationJson,
-            forHTTPHeaderField: ApiConstants.Header.Key.contentType
+            NetworkConstants.Header.Value.aplicationJson,
+            forHTTPHeaderField: NetworkConstants.Header.Key.contentType
         )
         var currentHeaders = request.allHTTPHeaderFields
         currentHeaders?.merge(additionalHeaders ?? [:]) { _, second in second }
