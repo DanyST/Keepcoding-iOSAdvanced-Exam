@@ -9,6 +9,8 @@ protocol DragonBallRepositoryProtocol {
     
     func getHeroes(withName name: String?, completion: @escaping (Result<Heroes, ApiError>) -> Void)
     
+    func getHeroLocations(by hero: Hero, completion: @escaping (Result<[HeroLocation], ApiError>) -> Void)
+    
     @discardableResult
     func saveLocalSecure(_ keyType: SecureLocalType, value: String) -> Bool
     

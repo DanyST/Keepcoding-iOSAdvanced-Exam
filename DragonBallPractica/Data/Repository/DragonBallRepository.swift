@@ -4,18 +4,15 @@ struct DragonBallRepository: DragonBallRepositoryProtocol {
     private let apiRestDataSource: DragonBallApiDataSourceProtocol
     private let secureLocalDataSource: SecureLocalDataSourceProtocol
     private let localDatabaseDataSource: LocalDatabaseDataSourceProtocol
-    private let heroDTOToDomainMapper: HeroDTOToDomainMapperProtocol
     
     init(
         apiRestDataSource: DragonBallApiDataSourceProtocol = DragonBallApiDataSource(networkProvider: NetworkProvider()),
         secureLocalDataSource: SecureLocalDataSourceProtocol = SecureLocalDataSource(),
-        localDatabaseDataSource: LocalDatabaseDataSourceProtocol = LocalDatabaseDataSource(),
-        heroDTOToDomainMapper: HeroDTOToDomainMapperProtocol = HeroDTOToDomainMapper()
+        localDatabaseDataSource: LocalDatabaseDataSourceProtocol = LocalDatabaseDataSource()
     ) {
         self.apiRestDataSource = apiRestDataSource
         self.secureLocalDataSource = secureLocalDataSource
         self.localDatabaseDataSource = localDatabaseDataSource
-        self.heroDTOToDomainMapper = heroDTOToDomainMapper
     }
     
     func login(
@@ -31,15 +28,15 @@ struct DragonBallRepository: DragonBallRepositoryProtocol {
             completion(.failure(.noToken))
             return
         }
-        apiRestDataSource.getHeroes(withName: name, token: token) { result in
-            switch result {
-            case let .success(heroesDTO):
-                let heroes = heroesDTO.compactMap { heroDTOToDomainMapper.map($0) }
-                completion(.success(heroes))
-            case let .failure(error):
-                completion(.failure(error))
-            }
+        apiRestDataSource.getHeroes(withName: name, token: token, completion: completion)
+    }
+    
+    func getHeroLocations(by hero: Hero, completion: @escaping (Result<[HeroLocation], ApiError>) -> Void) {
+        guard let token = getLocalSecure(.token) else {
+            completion(.failure(.noToken))
+            return
         }
+        apiRestDataSource.getHeroLocations(by: hero, token: token, completion: completion)
     }
     
     func saveHeroesInLocalDatabase(_ heroes: Heroes) {
