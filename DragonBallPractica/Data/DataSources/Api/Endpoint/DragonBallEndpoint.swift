@@ -34,7 +34,7 @@ extension DragonBallEndpoint {
         case let .heroes(name):
             return ["name": name ?? ""]
         case let .heroLocations(heroId):
-            return ["heroId": heroId]
+            return ["id": heroId]
         }
     }
 }
