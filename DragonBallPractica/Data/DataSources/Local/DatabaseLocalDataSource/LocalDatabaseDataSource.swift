@@ -42,8 +42,8 @@ extension LocalDatabaseDataSource: LocalDatabaseDataSourceProtocol {
         fetchRequest.sortDescriptors = [nameSortDescriptor]
         
         do {
-            let heroes = try  context.fetch(fetchRequest)
-            return heroes.map { heroDAOToDomainMapper.map($0) }
+            let heroesDAO = try  context.fetch(fetchRequest)
+            return heroesDAO.map { heroDAOToDomainMapper.map($0) }
         } catch {
             return []
         }
