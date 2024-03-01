@@ -10,6 +10,12 @@ protocol DragonBallApiDataSourceProtocol {
     func getHeroes(
         withName name: String?,
         token: String,
-        completion: @escaping (Result<[HeroDTO], ApiError>) -> Void
+        completion: @escaping (Result<[Hero], ApiError>) -> Void
+    )
+    
+    func getHeroLocations(
+        by hero: Hero,
+        token: String,
+        completion: @escaping (Result<[HeroLocation], ApiError>) -> Void
     )
 }
