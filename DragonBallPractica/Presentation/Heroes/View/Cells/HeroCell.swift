@@ -11,16 +11,16 @@ final class HeroCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let cornerRadius: CGFloat = 8.0
+        let cornerRadius: CGFloat = 20.0
         
         heroImageView.layer.cornerRadius = cornerRadius
         heroImageView.clipsToBounds = true
        
         opacityView.layer.cornerRadius = cornerRadius
-        opacityView.layer.opacity = 0.25
+        opacityView.layer.opacity = 0.4
         
         containerView.layer.cornerRadius = cornerRadius
-        containerView.layer.shadowRadius = cornerRadius
+        containerView.layer.shadowRadius = 8.0
         containerView.layer.shadowOffset = .zero
         containerView.layer.shadowColor = UIColor.gray.cgColor
         containerView.layer.shadowOpacity = 0.4
