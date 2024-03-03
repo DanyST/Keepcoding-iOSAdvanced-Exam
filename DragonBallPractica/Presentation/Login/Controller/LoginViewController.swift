@@ -93,8 +93,12 @@ extension LoginViewController {
     private func navigateToNext() {
         let storyboard = UIStoryboard.storyboard(.heroes)
         let viewController: HeroesViewController = storyboard.instantiateViewController()
-        let viewModel = HeroesViewModel(getHeroesUseCase: GetHeroesUseCase())
-        viewController.viewModel = viewModel
+        let getHeroesUseCase = GetHeroesUseCase()
+        let deleteSessionTokenUseCase = DeleteSessionTokenUseCase()
+        viewController.viewModel = HeroesViewModel(
+            getHeroesUseCase:getHeroesUseCase,
+            deleteSessionTokenUseCase: deleteSessionTokenUseCase
+        )
         navigationController?.setViewControllers([viewController], animated: true)
     }
     
