@@ -54,10 +54,9 @@ extension HeroesViewModel: HeroesViewControllerDelegate {
     }
     
     func heroCellModel(at index: Int) -> HeroCellModel? {
-        guard heroes.indices.contains(index) else {
+        guard let hero = hero(at: index) else {
             return nil
         }
-        let hero = heroes[index]
         let heroCellModel = HeroCellModel(
             photo: hero.photo,
             name: hero.name
@@ -66,6 +65,22 @@ extension HeroesViewModel: HeroesViewControllerDelegate {
     }
     
     func onItemSelected(at index: Int) {
-        viewState?(.navigateToHeroDetail)
+        guard let hero = hero(at: index) else {
+            return
+        }
+        viewState?(.navigateToHeroDetail(hero: hero))
+    }
+    
+    func logoutButtonDidtap() {
+        viewState?(.navigateToLogin)
+    }
+}
+
+private extension HeroesViewModel {
+    func hero(at index: Int) -> Hero? {
+        guard heroes.indices.contains(index) else {
+            return nil
+        }
+        return heroes[index]
     }
 }
