@@ -56,6 +56,10 @@ struct DragonBallRepository: DragonBallRepositoryProtocol {
         secureLocalDataSource.get(keyType)
     }
     
+    func deleteLocalSecure(_ keyType: SecureLocalType) -> Bool {
+        secureLocalDataSource.delete(keyType)
+    }
+    
     func saveHeroLocationsInLocalDatabase(_ heroLocations: HeroLocations, to hero: Hero) {
         localDatabaseDataSource.add(heroLocations: heroLocations, to: hero)
     }
