@@ -8,6 +8,7 @@ extension UIStoryboard {
         case login
         case heroes
         case heroDetail
+        case heroesMap
         
         var filename: String {
             return rawValue.firstLetterCapitalized
