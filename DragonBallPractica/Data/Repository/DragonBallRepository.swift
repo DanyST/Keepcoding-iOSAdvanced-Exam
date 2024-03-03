@@ -55,4 +55,12 @@ struct DragonBallRepository: DragonBallRepositoryProtocol {
     func getLocalSecure(_ keyType: SecureLocalType) -> String? {
         secureLocalDataSource.get(keyType)
     }
+    
+    func saveHeroLocationsInLocalDatabase(_ heroLocations: HeroLocations, to hero: Hero) {
+        localDatabaseDataSource.add(heroLocations: heroLocations, to: hero)
+    }
+    
+    func getHeroLocationsFromDataBase(by hero: Hero) -> HeroLocations {
+        localDatabaseDataSource.getHeroLocations(by: hero)
+    }
 }
