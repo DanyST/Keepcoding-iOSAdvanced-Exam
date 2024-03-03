@@ -7,9 +7,10 @@ extension UIStoryboard {
         case splash
         case login
         case heroes
+        case heroDetail
         
         var filename: String {
-            return rawValue.capitalized
+            return rawValue.firstLetterCapitalized
         }
     }
     
@@ -25,3 +26,4 @@ extension UIStoryboard {
         return UIStoryboard(name: storyboard.filename, bundle: bundle)
     }
 }
+
