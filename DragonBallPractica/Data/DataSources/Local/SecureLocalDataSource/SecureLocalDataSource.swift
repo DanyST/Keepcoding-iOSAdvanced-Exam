@@ -13,4 +13,8 @@ extension SecureLocalDataSource: SecureLocalDataSourceProtocol {
     func get(_ keyType: SecureLocalType) -> String? {
         keychain.get(keyType.rawValue)
     }
+    
+    func delete(_ keyType: SecureLocalType) -> Bool {
+        keychain.delete(keyType.rawValue)
+    }
 }
