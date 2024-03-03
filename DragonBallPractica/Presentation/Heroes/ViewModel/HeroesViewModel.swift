@@ -2,10 +2,15 @@ import Foundation
 
 final class HeroesViewModel {
     private let getHeroesUseCase: GetHeroesUseCaseProtocol
+    private let deleteSessionTokenUseCase: DeleteSessionTokenUseCaseProtocol
     private var _viewState: ((HeroesViewState) -> Void)?
     
-    init(getHeroesUseCase: GetHeroesUseCaseProtocol) {
+    init(
+        getHeroesUseCase: GetHeroesUseCaseProtocol,
+        deleteSessionTokenUseCase: DeleteSessionTokenUseCaseProtocol
+    ) {
         self.getHeroesUseCase = getHeroesUseCase
+        self.deleteSessionTokenUseCase = deleteSessionTokenUseCase
     }
     
     private var heroes = [Hero]()
@@ -72,7 +77,14 @@ extension HeroesViewModel: HeroesViewControllerDelegate {
     }
     
     func logoutButtonDidtap() {
-        viewState?(.navigateToLogin)
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            self?.deleteSessionTokenUseCase.execute()
+            self?.viewState?(.navigateToLogin)
+        }
+    }
+    
+    func mapButtonDidTap() {
+        viewState?(.navigateToHeroesMap)
     }
 }
 
