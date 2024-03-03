@@ -1,5 +1,7 @@
 import Foundation
 
+typealias HeroLocations = [HeroLocation]
+
 struct HeroLocation {
     let id: String
     let latitude: String
