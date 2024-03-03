@@ -26,10 +26,7 @@ final class HeroDetailViewModel {
                 self.viewState?(.loading(false))
                 switch result {                
                 case let .success(heroLocations):
-                    let heroAnnotations = self.heroLocationsToHeroAnnotationsMapper.map(
-                        heroLocations,
-                        with: self.hero
-                    )
+                    let heroAnnotations = self.heroLocationsToHeroAnnotationsMapper.map(heroLocations)
                     self.viewState?(.updateMap(heroAnnotations: heroAnnotations))
                 case let.failure(error):
                     print("Error: \(error)")
