@@ -38,7 +38,16 @@ private extension HeroesViewController {
                 self?.viewModel?.logoutButtonDidtap()
             })
         )
+        
+        let mapButton = UIBarButtonItem(
+            image: UIImage(systemName: "map"),
+            primaryAction: UIAction(handler: { [weak self] _ in
+                self?.viewModel?.mapButtonDidTap()
+            })
+        )
+        
         navigationItem.leftBarButtonItem = logoutButton
+        navigationItem.rightBarButtonItem = mapButton
     }
     
     func setupTableView() {
@@ -63,6 +72,8 @@ private extension HeroesViewController {
                     self.navigateToHeroDetail(hero: hero)
                 case .navigateToLogin:
                     self.navigateToLogin()
+                case .navigateToHeroesMap:
+                    self.navigateToHeroesMap()
                 }
             }
         }
@@ -70,7 +81,7 @@ private extension HeroesViewController {
 }
 
 private extension HeroesViewController {
-    private func navigateToHeroDetail(hero: Hero) {
+    func navigateToHeroDetail(hero: Hero) {
         let storyboard = UIStoryboard.storyboard(.heroDetail)
         let viewController: HeroDetailViewController = storyboard.instantiateViewController()
         let getHeroLocationsUseCase = GetHeroLocationsUseCase()
@@ -84,7 +95,7 @@ private extension HeroesViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
-    private func navigateToLogin() {
+    func navigateToLogin() {
         let storyboard = UIStoryboard.storyboard(.login)
         let viewController: LoginViewController = storyboard.instantiateViewController()
         let loginUseCase = LoginUseCase()
@@ -95,6 +106,23 @@ private extension HeroesViewController {
         )
         viewController.viewModel = viewModel
         navigationController?.setViewControllers([viewController], animated: true)
+    }
+    
+    func navigateToHeroesMap() {
+        let storyboard = UIStoryboard.storyboard(.heroesMap)
+        let viewController: HeroesMapViewController = storyboard.instantiateViewController()
+        
+        let getHeroesWithHeroLocationsUseCase = GetHeroesWithHeroLocationsUseCase(
+            getHeroesUseCase: GetHeroesUseCase(),
+            getHeroLocationsUseCase: GetHeroLocationsUseCase()
+        )
+        let heroLocationsToHeroAnnotationsMapper = HeroLocationsToHeroAnnotationsMapper()
+        let viewModel = HeroesMapViewModel(
+            getHeroesWithHeroLocationsUseCase: getHeroesWithHeroLocationsUseCase,
+            heroLocationsToHeroAnnotationsMapper: heroLocationsToHeroAnnotationsMapper
+        )
+        viewController.viewModel = viewModel
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 
