@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Map view configurations" minToolsVersion="14.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Heroes Map View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="HeroesMapViewController" id="Y6W-OH-hqX" customClass="HeroesMapViewController" customModule="DragonBallPractica" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bM1-Cf-oDe">
+                                <rect key="frame" x="0.0" y="59" width="393" height="793"/>
+                                <standardMapConfiguration key="preferredConfiguration"/>
+                            </mapView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRR-7q-6uI" userLabel="Loading View">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="0Ji-BF-Gda">
+                                        <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                        <color key="color" systemColor="systemOrangeColor"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="0Ji-BF-Gda" firstAttribute="centerY" secondItem="SRR-7q-6uI" secondAttribute="centerY" id="CHh-x1-Orm"/>
+                                    <constraint firstItem="0Ji-BF-Gda" firstAttribute="centerX" secondItem="SRR-7q-6uI" secondAttribute="centerX" id="gUt-Xn-fH5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="SRR-7q-6uI" secondAttribute="bottom" id="32V-LX-7sK"/>
+                            <constraint firstItem="SRR-7q-6uI" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" id="7UT-iZ-W3C"/>
+                            <constraint firstItem="bM1-Cf-oDe" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="9Dz-Ue-ooU"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="bM1-Cf-oDe" secondAttribute="trailing" id="Cts-99-TtM"/>
+                            <constraint firstItem="bM1-Cf-oDe" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="GaR-Of-NG1"/>
+                            <constraint firstItem="SRR-7q-6uI" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="J7U-CW-PFC"/>
+                            <constraint firstItem="SRR-7q-6uI" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="PDc-VJ-Qvv"/>
+                            <constraint firstAttribute="bottom" secondItem="bM1-Cf-oDe" secondAttribute="bottom" id="uFH-Ag-NFD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingView" destination="SRR-7q-6uI" id="mHl-yc-RJG"/>
+                        <outlet property="mapView" destination="bM1-Cf-oDe" id="5Sk-5h-ZUA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
