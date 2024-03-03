@@ -5,4 +5,5 @@ enum HeroesViewState {
     case updateData
     case navigateToHeroDetail(hero: Hero)
     case navigateToLogin
+    case navigateToHeroesMap
 }
