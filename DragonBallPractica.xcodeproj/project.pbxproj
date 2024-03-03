@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		760736332B94F440003B632A /* HeroLocationsToHeroAnnotationsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760736322B94F440003B632A /* HeroLocationsToHeroAnnotationsMapper.swift */; };
 		760736352B94F4A1003B632A /* HeroLocationsToHeroAnnotationsMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760736342B94F4A1003B632A /* HeroLocationsToHeroAnnotationsMapperProtocol.swift */; };
+		760736382B94F827003B632A /* GetHeroesWithHeroLocationsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760736372B94F827003B632A /* GetHeroesWithHeroLocationsUseCase.swift */; };
+		7607363A2B94F82E003B632A /* GetHeroesWithHeroLocationsUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760736392B94F82E003B632A /* GetHeroesWithHeroLocationsUseCaseProtocol.swift */; };
+		7607363E2B951CF9003B632A /* HeroesMap.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7607363D2B951CF9003B632A /* HeroesMap.storyboard */; };
+		760736432B951D98003B632A /* HeroesMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760736422B951D98003B632A /* HeroesMapViewController.swift */; };
+		760736452B951DA2003B632A /* HeroesMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760736442B951DA2003B632A /* HeroesMapViewModel.swift */; };
+		760736472B951DA9003B632A /* HeroesMapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760736462B951DA9003B632A /* HeroesMapViewState.swift */; };
+		760736492B951E21003B632A /* HeroesMapViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760736482B951E21003B632A /* HeroesMapViewControllerDelegate.swift */; };
+		7607364C2B952A3C003B632A /* DeleteSessionTokenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7607364B2B952A3C003B632A /* DeleteSessionTokenUseCase.swift */; };
+		7607364E2B952A4D003B632A /* DeleteSessionTokenUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7607364D2B952A4D003B632A /* DeleteSessionTokenUseCaseProtocol.swift */; };
 		760F7C9B2B92C10100DD2C1D /* String+FirstLetterCapitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760F7C9A2B92C10100DD2C1D /* String+FirstLetterCapitalized.swift */; };
 		763A65702B1034D4008C0560 /* DragonBallModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 763A656E2B1034D4008C0560 /* DragonBallModel.xcdatamodeld */; };
 		763A65722B1034E6008C0560 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A65712B1034E6008C0560 /* CoreDataStack.swift */; };
@@ -92,6 +101,15 @@
 /* Begin PBXFileReference section */
 		760736322B94F440003B632A /* HeroLocationsToHeroAnnotationsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLocationsToHeroAnnotationsMapper.swift; sourceTree = "<group>"; };
 		760736342B94F4A1003B632A /* HeroLocationsToHeroAnnotationsMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLocationsToHeroAnnotationsMapperProtocol.swift; sourceTree = "<group>"; };
+		760736372B94F827003B632A /* GetHeroesWithHeroLocationsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeroesWithHeroLocationsUseCase.swift; sourceTree = "<group>"; };
+		760736392B94F82E003B632A /* GetHeroesWithHeroLocationsUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetHeroesWithHeroLocationsUseCaseProtocol.swift; sourceTree = "<group>"; };
+		7607363D2B951CF9003B632A /* HeroesMap.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HeroesMap.storyboard; sourceTree = "<group>"; };
+		760736422B951D98003B632A /* HeroesMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMapViewController.swift; sourceTree = "<group>"; };
+		760736442B951DA2003B632A /* HeroesMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMapViewModel.swift; sourceTree = "<group>"; };
+		760736462B951DA9003B632A /* HeroesMapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMapViewState.swift; sourceTree = "<group>"; };
+		760736482B951E21003B632A /* HeroesMapViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMapViewControllerDelegate.swift; sourceTree = "<group>"; };
+		7607364B2B952A3C003B632A /* DeleteSessionTokenUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteSessionTokenUseCase.swift; sourceTree = "<group>"; };
+		7607364D2B952A4D003B632A /* DeleteSessionTokenUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteSessionTokenUseCaseProtocol.swift; sourceTree = "<group>"; };
 		760F7C9A2B92C10100DD2C1D /* String+FirstLetterCapitalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FirstLetterCapitalized.swift"; sourceTree = "<group>"; };
 		763A656F2B1034D4008C0560 /* DragonBallModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DragonBallModel.xcdatamodel; sourceTree = "<group>"; };
 		763A65712B1034E6008C0560 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -194,6 +212,68 @@
 			path = Mappers;
 			sourceTree = "<group>";
 		};
+		760736362B94F808003B632A /* GetHeroesWithHeroLocationsUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				760736372B94F827003B632A /* GetHeroesWithHeroLocationsUseCase.swift */,
+				760736392B94F82E003B632A /* GetHeroesWithHeroLocationsUseCaseProtocol.swift */,
+			);
+			path = GetHeroesWithHeroLocationsUseCase;
+			sourceTree = "<group>";
+		};
+		7607363B2B951B77003B632A /* HeroesMap */ = {
+			isa = PBXGroup;
+			children = (
+				760736412B951D88003B632A /* Models */,
+				760736402B951D84003B632A /* ViewModel */,
+				7607363F2B951D79003B632A /* Controller */,
+				7607363C2B951BAA003B632A /* View */,
+			);
+			path = HeroesMap;
+			sourceTree = "<group>";
+		};
+		7607363C2B951BAA003B632A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7607363D2B951CF9003B632A /* HeroesMap.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7607363F2B951D79003B632A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				760736422B951D98003B632A /* HeroesMapViewController.swift */,
+				760736482B951E21003B632A /* HeroesMapViewControllerDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		760736402B951D84003B632A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				760736442B951DA2003B632A /* HeroesMapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		760736412B951D88003B632A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				760736462B951DA9003B632A /* HeroesMapViewState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		7607364A2B952A25003B632A /* DeleteSessionTokenUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				7607364B2B952A3C003B632A /* DeleteSessionTokenUseCase.swift */,
+				7607364D2B952A4D003B632A /* DeleteSessionTokenUseCaseProtocol.swift */,
+			);
+			path = DeleteSessionTokenUseCase;
+			sourceTree = "<group>";
+		};
 		763A656D2B1033E9008C0560 /* DatabaseLocalDataSource */ = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +344,8 @@
 		764844832B0D7BE3007DD0C4 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				7607364A2B952A25003B632A /* DeleteSessionTokenUseCase */,
+				760736362B94F808003B632A /* GetHeroesWithHeroLocationsUseCase */,
 				76486BDD2B128DF3001FBE49 /* GetHeroLocationsUseCase */,
 				76F6FFCA2B0EED9F00DA3870 /* GetHeroesUseCase */,
 				764844912B0D7F09007DD0C4 /* LoginValidatorUseCase */,
@@ -426,6 +508,7 @@
 				767A49362AEE08E200C0D225 /* Splash */,
 				767A49502AEE193600C0D225 /* Login */,
 				767A495D2AEE34FD00C0D225 /* Heroes */,
+				7607363B2B951B77003B632A /* HeroesMap */,
 				76486BD22B127E88001FBE49 /* HeroDetail */,
 			);
 			path = Presentation;
@@ -824,6 +907,7 @@
 				767A49282AEE072000C0D225 /* Assets.xcassets in Resources */,
 				767A49612AEE352800C0D225 /* Heroes.storyboard in Resources */,
 				767A493A2AEE0AAC00C0D225 /* Splash.storyboard in Resources */,
+				7607363E2B951CF9003B632A /* HeroesMap.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -835,6 +919,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				763A65722B1034E6008C0560 /* CoreDataStack.swift in Sources */,
+				760736492B951E21003B632A /* HeroesMapViewControllerDelegate.swift in Sources */,
 				763A65852B103E5D008C0560 /* HeroDAOToDomainMapperProtocol.swift in Sources */,
 				767A494D2AEE155500C0D225 /* UIViewController+StoryboardIdentifer.swift in Sources */,
 				763A65802B103D5B008C0560 /* HeroToDAOMapper.swift in Sources */,
@@ -842,6 +927,7 @@
 				76486BDF2B128E01001FBE49 /* GetHeroLocationsUseCase.swift in Sources */,
 				763A657D2B103CEC008C0560 /* HeroDAOToDomainMapper.swift in Sources */,
 				76F66B1C2B942797009B22E3 /* HeroLocationToDAOMapper.swift in Sources */,
+				7607364E2B952A4D003B632A /* DeleteSessionTokenUseCaseProtocol.swift in Sources */,
 				763A65702B1034D4008C0560 /* DragonBallModel.xcdatamodeld in Sources */,
 				7697DCD02B92A9E50046E63C /* HeroDetailViewControllerDelegate.swift in Sources */,
 				764844962B0D9190007DD0C4 /* HeroesViewModel.swift in Sources */,
@@ -849,6 +935,7 @@
 				76F66B172B942624009B22E3 /* HeroLocationDAOToDomainMapper.swift in Sources */,
 				7648449B2B0D93E9007DD0C4 /* HeroesViewControllerDelegate.swift in Sources */,
 				767A49442AEE0FF700C0D225 /* SplashViewModel.swift in Sources */,
+				760736472B951DA9003B632A /* HeroesMapViewState.swift in Sources */,
 				764844A12B0D9731007DD0C4 /* HeroCell.swift in Sources */,
 				76486BE12B128E0C001FBE49 /* GetHeroLocationsUseCaseProtocol.swift in Sources */,
 				76486BD82B1289A0001FBE49 /* HeroLocationDTOToDomainMapper.swift in Sources */,
@@ -863,8 +950,11 @@
 				764844812B0D7956007DD0C4 /* DragonBallRepositoryProtocol.swift in Sources */,
 				7697DCC32B92945C0046E63C /* NetworkConstants.swift in Sources */,
 				76F6FFD82B0EF60100DA3870 /* HeroDTOToDomainMapper.swift in Sources */,
+				760736432B951D98003B632A /* HeroesMapViewController.swift in Sources */,
 				767A491F2AEE071F00C0D225 /* AppDelegate.swift in Sources */,
 				767A49672AEEB36900C0D225 /* DragonBallApiDataSource.swift in Sources */,
+				7607363A2B94F82E003B632A /* GetHeroesWithHeroLocationsUseCaseProtocol.swift in Sources */,
+				760736382B94F827003B632A /* GetHeroesWithHeroLocationsUseCase.swift in Sources */,
 				7648448A2B0D7D77007DD0C4 /* IsLoggedUseCase.swift in Sources */,
 				760736332B94F440003B632A /* HeroLocationsToHeroAnnotationsMapper.swift in Sources */,
 				76F6FFDA2B0EFBE300DA3870 /* HeroDTOToDomainMapperProtocol.swift in Sources */,
@@ -890,12 +980,14 @@
 				763A65832B103D6C008C0560 /* HeroToDAOMapperProtocol.swift in Sources */,
 				76F6FFD52B0EF50B00DA3870 /* Hero.swift in Sources */,
 				767A496E2AEEB4BE00C0D225 /* HTTPMethod.swift in Sources */,
+				7607364C2B952A3C003B632A /* DeleteSessionTokenUseCase.swift in Sources */,
 				76F6FFCE2B0EEDB700DA3870 /* GetHeroesUseCaseProtocol.swift in Sources */,
 				76F6FFD12B0EF2BC00DA3870 /* HeroDTO.swift in Sources */,
 				764844A62B0D9B61007DD0C4 /* HeroCellModel.swift in Sources */,
 				764844A42B0D9778007DD0C4 /* ReusableView.swift in Sources */,
 				767A49482AEE127700C0D225 /* UIStoryboard+instantiateViewController.swift in Sources */,
 				764844992B0D91C5007DD0C4 /* HeroesViewState.swift in Sources */,
+				760736452B951DA2003B632A /* HeroesMapViewModel.swift in Sources */,
 				767A49562AEE1F9A00C0D225 /* LoginViewController.swift in Sources */,
 				767A497E2AEECF0700C0D225 /* SecureLocalDataSource.swift in Sources */,
 				7648448C2B0D7D7F007DD0C4 /* IsLoggedUseCaseProtocol.swift in Sources */,
