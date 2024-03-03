@@ -14,16 +14,19 @@ For the development of the project, we will use the Dragon Ball REST API. The ge
 ## Architecture Solution
 - Clean architecture
   - Data Layer
-    - DTO Models mappers to Domain
     - DataSources
       - Network with endpoint connection.
+        - DTO Models
+        - DTO Model mapper to domain
       - Local(CoreData and Keychain)
+        - DAO Models
+        - DAO Models mapper to domain
     - Repository
   - Domain Layer
     - UseCases
     - Models
   - Presentation Layer 
-    - Domain to presentation models
+    - Domain model mapper to presentation
     - ViewModels
     - Views
 
