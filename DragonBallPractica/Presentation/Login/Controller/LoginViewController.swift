@@ -1,17 +1,4 @@
-//
-//  LoginViewController.swift
-//  DragonBallPractica
-//
-//  Created by Luis Eduardo Herrera Lillo on 29-10-23.
-//
-
 import UIKit
-
-// MARK: - Protocol
-protocol LoginViewControllerDelegate {
-    var viewState: ((LoginViewState) -> Void)? { get set }
-    func onLoginPressed(with email: String?, and password: String?)
-}
 
 final class LoginViewController: UIViewController {
     // MARK: - Outlets
@@ -117,6 +104,7 @@ extension LoginViewController {
     }
 }
 
+// MARK: - UITextFieldDelegate
 extension LoginViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
         switch FieldType(rawValue: textField.tag)  {
@@ -136,6 +124,7 @@ extension LoginViewController {
     }
 }
 
+// MARK: - Keyboard Observers
 extension LoginViewController {
     private func addKeyboardObservers() {
         NotificationCenter.default.addObserver(self, selector: #selector(self.keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
