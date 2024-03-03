@@ -8,4 +8,5 @@ protocol HeroesViewControllerDelegate {
     func heroCellModel(at index: Int) -> HeroCellModel?
     func onItemSelected(at index: Int)
     func logoutButtonDidtap()
+    func mapButtonDidTap()
 }
