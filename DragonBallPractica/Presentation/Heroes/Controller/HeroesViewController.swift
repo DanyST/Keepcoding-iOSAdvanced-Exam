@@ -1,4 +1,5 @@
 import UIKit
+import Kingfisher
 
 final class HeroesViewController: UIViewController {
     // MARK: - Outlets
@@ -23,10 +24,21 @@ private extension HeroesViewController {
     }
 }
 
+// MARK: - Configure View
 private extension HeroesViewController {
     func initViews() {
-        navigationController?.navigationBar.prefersLargeTitles = true
+        setupNavigationBar()
         setupTableView()
+    }
+    
+    func setupNavigationBar() {
+        let logoutButton = UIBarButtonItem(
+            title: "Log Out",
+            primaryAction: UIAction(handler: { [weak self] _ in
+                self?.viewModel?.logoutButtonDidtap()
+            })
+        )
+        navigationItem.leftBarButtonItem = logoutButton
     }
     
     func setupTableView() {
@@ -47,14 +59,46 @@ private extension HeroesViewController {
                     self.loadingView.isHidden = !isLoading
                 case .updateData:
                     self.tableView.reloadData()
-                case .navigateToHeroDetail:
-                    break
+                case let .navigateToHeroDetail(hero):
+                    self.navigateToHeroDetail(hero: hero)
+                case .navigateToLogin:
+                    self.navigateToLogin()
                 }
             }
         }
     }
 }
 
+private extension HeroesViewController {
+    private func navigateToHeroDetail(hero: Hero) {
+        let storyboard = UIStoryboard.storyboard(.heroDetail)
+        let viewController: HeroDetailViewController = storyboard.instantiateViewController()
+        let getHeroLocationsUseCase = GetHeroLocationsUseCase()
+        let heroLocationsToHeroAnnotationsMapper = HeroLocationsToHeroAnnotationsMapper()
+        let viewModel = HeroDetailViewModel(
+            hero: hero,
+            getHeroLocationsUseCase: getHeroLocationsUseCase,
+            heroLocationsToHeroAnnotationsMapper: heroLocationsToHeroAnnotationsMapper
+        )
+        viewController.viewModel = viewModel
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    private func navigateToLogin() {
+        let storyboard = UIStoryboard.storyboard(.login)
+        let viewController: LoginViewController = storyboard.instantiateViewController()
+        let loginUseCase = LoginUseCase()
+        let loginValidatorUseCase = LoginValidatorUseCase()
+        let viewModel = LoginViewModel(
+            loginUseCase: loginUseCase,
+            loginValidatorUseCase: loginValidatorUseCase
+        )
+        viewController.viewModel = viewModel
+        navigationController?.setViewControllers([viewController], animated: true)
+    }
+}
+
+// MARK: - UITableViewDelegate
 extension HeroesViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         Constants.heightRow
@@ -66,6 +110,7 @@ extension HeroesViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension HeroesViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel?.dataCount ?? 0
