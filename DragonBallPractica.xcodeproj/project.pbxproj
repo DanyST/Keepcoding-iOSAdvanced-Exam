@@ -18,6 +18,9 @@
 		760736492B951E21003B632A /* HeroesMapViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760736482B951E21003B632A /* HeroesMapViewControllerDelegate.swift */; };
 		7607364C2B952A3C003B632A /* DeleteSessionTokenUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7607364B2B952A3C003B632A /* DeleteSessionTokenUseCase.swift */; };
 		7607364E2B952A4D003B632A /* DeleteSessionTokenUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7607364D2B952A4D003B632A /* DeleteSessionTokenUseCaseProtocol.swift */; };
+		760736612B953C52003B632A /* DragonBallEndpointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760736602B953C52003B632A /* DragonBallEndpointTests.swift */; };
+		760736652B9540D4003B632A /* HeroDTOToDomainMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760736642B9540D4003B632A /* HeroDTOToDomainMapperTests.swift */; };
+		760736672B954596003B632A /* HeroLocationDTOToDomainMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760736662B954596003B632A /* HeroLocationDTOToDomainMapperTests.swift */; };
 		760F7C9B2B92C10100DD2C1D /* String+FirstLetterCapitalized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 760F7C9A2B92C10100DD2C1D /* String+FirstLetterCapitalized.swift */; };
 		763A65702B1034D4008C0560 /* DragonBallModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 763A656E2B1034D4008C0560 /* DragonBallModel.xcdatamodeld */; };
 		763A65722B1034E6008C0560 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763A65712B1034E6008C0560 /* CoreDataStack.swift */; };
@@ -98,6 +101,16 @@
 		76F6FFDA2B0EFBE300DA3870 /* HeroDTOToDomainMapperProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F6FFD92B0EFBE300DA3870 /* HeroDTOToDomainMapperProtocol.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		760736572B953BC5003B632A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 767A49132AEE071F00C0D225 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 767A491A2AEE071F00C0D225;
+			remoteInfo = DragonBallPractica;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		760736322B94F440003B632A /* HeroLocationsToHeroAnnotationsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLocationsToHeroAnnotationsMapper.swift; sourceTree = "<group>"; };
 		760736342B94F4A1003B632A /* HeroLocationsToHeroAnnotationsMapperProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLocationsToHeroAnnotationsMapperProtocol.swift; sourceTree = "<group>"; };
@@ -110,6 +123,10 @@
 		760736482B951E21003B632A /* HeroesMapViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesMapViewControllerDelegate.swift; sourceTree = "<group>"; };
 		7607364B2B952A3C003B632A /* DeleteSessionTokenUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteSessionTokenUseCase.swift; sourceTree = "<group>"; };
 		7607364D2B952A4D003B632A /* DeleteSessionTokenUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteSessionTokenUseCaseProtocol.swift; sourceTree = "<group>"; };
+		760736532B953BC5003B632A /* DragonBallPracticaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonBallPracticaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		760736602B953C52003B632A /* DragonBallEndpointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonBallEndpointTests.swift; sourceTree = "<group>"; };
+		760736642B9540D4003B632A /* HeroDTOToDomainMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDTOToDomainMapperTests.swift; sourceTree = "<group>"; };
+		760736662B954596003B632A /* HeroLocationDTOToDomainMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroLocationDTOToDomainMapperTests.swift; sourceTree = "<group>"; };
 		760F7C9A2B92C10100DD2C1D /* String+FirstLetterCapitalized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+FirstLetterCapitalized.swift"; sourceTree = "<group>"; };
 		763A656F2B1034D4008C0560 /* DragonBallModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DragonBallModel.xcdatamodel; sourceTree = "<group>"; };
 		763A65712B1034E6008C0560 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -191,6 +208,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		760736502B953BC5003B632A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		767A49182AEE071F00C0D225 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -272,6 +296,56 @@
 				7607364D2B952A4D003B632A /* DeleteSessionTokenUseCaseProtocol.swift */,
 			);
 			path = DeleteSessionTokenUseCase;
+			sourceTree = "<group>";
+		};
+		760736542B953BC5003B632A /* DragonBallPracticaTests */ = {
+			isa = PBXGroup;
+			children = (
+				7607365C2B953C23003B632A /* Data */,
+			);
+			path = DragonBallPracticaTests;
+			sourceTree = "<group>";
+		};
+		7607365C2B953C23003B632A /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				7607365D2B953C35003B632A /* DataSources */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		7607365D2B953C35003B632A /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				7607365E2B953C39003B632A /* Api */,
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		7607365E2B953C39003B632A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				760736622B9540A7003B632A /* Mappers */,
+				7607365F2B953C3D003B632A /* Endpoint */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		7607365F2B953C3D003B632A /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				760736602B953C52003B632A /* DragonBallEndpointTests.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		760736622B9540A7003B632A /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				760736642B9540D4003B632A /* HeroDTOToDomainMapperTests.swift */,
+				760736662B954596003B632A /* HeroLocationDTOToDomainMapperTests.swift */,
+			);
+			path = Mappers;
 			sourceTree = "<group>";
 		};
 		763A656D2B1033E9008C0560 /* DatabaseLocalDataSource */ = {
@@ -459,6 +533,7 @@
 			isa = PBXGroup;
 			children = (
 				767A491D2AEE071F00C0D225 /* DragonBallPractica */,
+				760736542B953BC5003B632A /* DragonBallPracticaTests */,
 				767A491C2AEE071F00C0D225 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -467,6 +542,7 @@
 			isa = PBXGroup;
 			children = (
 				767A491B2AEE071F00C0D225 /* DragonBallPractica.app */,
+				760736532B953BC5003B632A /* DragonBallPracticaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -837,6 +913,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		760736522B953BC5003B632A /* DragonBallPracticaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 760736592B953BC5003B632A /* Build configuration list for PBXNativeTarget "DragonBallPracticaTests" */;
+			buildPhases = (
+				7607364F2B953BC5003B632A /* Sources */,
+				760736502B953BC5003B632A /* Frameworks */,
+				760736512B953BC5003B632A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				760736582B953BC5003B632A /* PBXTargetDependency */,
+			);
+			name = DragonBallPracticaTests;
+			productName = DragonBallPracticaTests;
+			productReference = 760736532B953BC5003B632A /* DragonBallPracticaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		767A491A2AEE071F00C0D225 /* DragonBallPractica */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 767A492F2AEE072000C0D225 /* Build configuration list for PBXNativeTarget "DragonBallPractica" */;
@@ -865,9 +959,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1520;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					760736522B953BC5003B632A = {
+						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
+						TestTargetID = 767A491A2AEE071F00C0D225;
+					};
 					767A491A2AEE071F00C0D225 = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
@@ -891,11 +990,19 @@
 			projectRoot = "";
 			targets = (
 				767A491A2AEE071F00C0D225 /* DragonBallPractica */,
+				760736522B953BC5003B632A /* DragonBallPracticaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		760736512B953BC5003B632A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		767A49192AEE071F00C0D225 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -914,6 +1021,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7607364F2B953BC5003B632A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				760736612B953C52003B632A /* DragonBallEndpointTests.swift in Sources */,
+				760736672B954596003B632A /* HeroLocationDTOToDomainMapperTests.swift in Sources */,
+				760736652B9540D4003B632A /* HeroDTOToDomainMapperTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		767A49172AEE071F00C0D225 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1002,6 +1119,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		760736582B953BC5003B632A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 767A491A2AEE071F00C0D225 /* DragonBallPractica */;
+			targetProxy = 760736572B953BC5003B632A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		767A49292AEE072000C0D225 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -1014,6 +1139,54 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7607365A2B953BC5003B632A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.iOSAdvanced.practica.DragonBallPracticaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragonBallPractica.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DragonBallPractica";
+			};
+			name = Debug;
+		};
+		7607365B2B953BC5003B632A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.iOSAdvanced.practica.DragonBallPracticaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragonBallPractica.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DragonBallPractica";
+			};
+			name = Release;
+		};
 		767A492D2AEE072000C0D225 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1146,7 +1319,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.practica.DragonBallPractica;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.iOSAdvanced.practica.DragonBallPractica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1172,7 +1345,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.practica.DragonBallPractica;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lhl.iOSAdvanced.practica.DragonBallPractica;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1183,6 +1356,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		760736592B953BC5003B632A /* Build configuration list for PBXNativeTarget "DragonBallPracticaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7607365A2B953BC5003B632A /* Debug */,
+				7607365B2B953BC5003B632A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		767A49162AEE071F00C0D225 /* Build configuration list for PBXProject "DragonBallPractica" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
